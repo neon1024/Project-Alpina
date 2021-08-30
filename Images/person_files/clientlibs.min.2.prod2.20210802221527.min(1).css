@@ -1,0 +1,31 @@
+.ds2-model-card--image{margin:0 0 10px 0;background-position:center bottom;position:relative}
+.ds2-model-card--image--loading{display:block;position:relative}
+.ds2-model-card--image--loading:before{display:block;position:absolute;left:50%;top:50%;margin:-15px 0 0 -15px;width:30px;height:30px;content:' ';background:url("data:image/svg+xml;charset=utf-8;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMTAwIDEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBzdHlsZT0iY29sb3I6IzFjNjlkNCI+PHN0eWxlPi5pbm5lci1jaXJjbGUsLnNwaW5uZXJ7YW5pbWF0aW9uLWl0ZXJhdGlvbi1jb3VudDppbmZpbml0ZTthbmltYXRpb24tdGltaW5nLWZ1bmN0aW9uOmxpbmVhcn0uc3Bpbm5lcnthbmltYXRpb24tbmFtZTpzcGluO2FuaW1hdGlvbi1kdXJhdGlvbjoxLjNzO3RyYW5zZm9ybS1vcmlnaW46Y2VudGVyfS5pbm5lci1jaXJjbGV7YW5pbWF0aW9uLW5hbWU6em9vbUluT3V0O2FuaW1hdGlvbi1kdXJhdGlvbjo1LjJzfUBrZXlmcmFtZXMgem9vbUluT3V0ezAlLDEwMCUsNSUsOTUle3RyYW5zZm9ybTp0cmFuc2xhdGUoNTBweCw1MHB4KSBzY2FsZSgwKX0yMCUsODAle3RyYW5zZm9ybTp0cmFuc2xhdGUoMTBweCwxMHB4KSBzY2FsZSguOCl9fUBrZXlmcmFtZXMgc3Bpbntmcm9te3RyYW5zZm9ybTpyb3RhdGUoMCl9dG97dHJhbnNmb3JtOnJvdGF0ZSgzNjBkZWcpfX08L3N0eWxlPjxkZWZzPjxtYXNrIGlkPSJNYXNrIj48Y2lyY2xlIGN4PSI1MCIgY3k9IjUwIiByPSI1MCIgZmlsbD0id2hpdGUiLz48Y2lyY2xlIGN4PSI1MCIgY3k9IjUwIiByPSI1MCIgY2xhc3M9ImlubmVyLWNpcmNsZSIgZmlsbD0iYmxhY2siLz48L21hc2s+PC9kZWZzPjxnIG1hc2s9InVybCgjTWFzaykiPjxnIGNsYXNzPSJzcGlubmVyIj48cmVjdCBoZWlnaHQ9IjUwIiB3aWR0aD0iNTAiIHk9IjAiIHg9IjAiIGZpbGw9ImN1cnJlbnRDb2xvciIvPjxyZWN0IGhlaWdodD0iNTAiIHdpZHRoPSI1MCIgeT0iNTAiIHg9IjUwIiBmaWxsPSJjdXJyZW50Q29sb3IiLz48L2c+PC9nPjwvc3ZnPg==");background-repeat:no-repeat}
+.ds2-model-card--image--loading.ds2-img-loaded:before{display:none}
+.ds2-model-card--image--loading img{opacity:0}
+.ds2-model-card--image a{position:relative;overflow:hidden;display:block;overflow:visible;margin:0}
+.ds2-model-card--image a:before{display:block;content:' ';width:100%;padding-top:60%}
+.ds2-model-card--image a>.content,.ds2-model-card--image a>img,.ds2-model-card--image a>picture{position:absolute;top:0;left:0;right:0;bottom:0}
+.ds2-model-card--image .ds2-model-card--street-img{bottom:5%;top:unset}
+.ds2-model-card--image .ds2-model-card--street-img img,.ds2-model-card--image .ds2-model-card--vehicle-img img{width:100%;height:auto;transition:all .2s ease-in}
+.ds2-model-card--image .ds2-model-card--street-img img.error,.ds2-model-card--image .ds2-model-card--vehicle-img img.error{opacity:0}
+.ds2-model-card--image .ds2-model-card-image--fadeIn{opacity:1}
+html.csstransforms.csstransitions .ds2-component[data-image-zoom-effect=true] .ds2-model-card--image{overflow:hidden}
+html.csstransforms.csstransitions .ds2-component[data-image-zoom-effect=true] .ds2-model-card--image a>img{transition:transform .2s ease;transform:scale(1)}
+html.csstransforms.csstransitions .ds2-component[data-image-zoom-effect=true] .ds2-model-card--image a>img:focus,html.csstransforms.csstransitions .ds2-component[data-image-zoom-effect=true] .ds2-model-card--image a>img:hover{transform:scale(1.1)}
+.ds2-model-card .ds2-model-card__brand-label{position:absolute;bottom:0;height:8.8%;width:auto}
+.ds2-model-card .ds2-model-card--fuel-type{margin:.25rem 0}
+.ds2-model-card .ds2-model-card--fuel-type>span{white-space:nowrap}
+.ds2-model-card .ds2-model-card--fuel-type--diesel,.ds2-model-card .ds2-model-card--fuel-type--gasoline{color:#4d4d4d}
+.ds2-model-card .ds2-model-card--fuel-type--full-electric,.ds2-model-card .ds2-model-card--fuel-type--plugin-hybrid{color:#1c69d4}
+.ds2-model-card .ds2-model-card--fuel-type--dot{color:#bbb;margin:0 .25rem}
+.ds2-model-card .ds2-model-card--new-model-label{color:#fff;background-color:#262626;padding:.25rem .5rem;position:absolute;right:0;top:15px}
+.ds2-cardlist--container .ds2-linklist--item:last-child{margin-bottom:2rem}
+.ds2-cardlist--container .ds2-cardlist--card{display:none}
+.ds2-cardlist--container .ds2-cardlist--card.ds2-active{display:block}
+.ds2-model-card-electricIcon{position:absolute;top:43%;left:5%;display:flex;justify-content:center;align-items:center;width:50px;height:50px;transform:translateY(-50%)}
+.ds2-model-card-electricIcon__type--full-electric,.ds2-model-card-electricIcon__type--plugin-hybrid{font-family:BMW_iconFont;font-weight:400;font-size:46px;color:#0066b1}
+.ds2-model-card-electricIcon__type--full-electric::before,.ds2-model-card-electricIcon__type--plugin-hybrid::before{content:"\e96d"}
+@media only screen and (min-width:768px){.ds2-model-card-electricIcon__type--full-electric,.ds2-model-card-electricIcon__type--plugin-hybrid{font-size:58px}
+}
+.ds2-model-card-electricIcon__type--plugin-hybrid::before{content:"\e96e"}

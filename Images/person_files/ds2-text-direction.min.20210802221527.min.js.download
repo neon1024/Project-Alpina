@@ -1,0 +1,1 @@
+define("ds2-text-direction",function(){var a="rtl"!==window.document.dir;return{isLTR:a,isRTL:!a}});

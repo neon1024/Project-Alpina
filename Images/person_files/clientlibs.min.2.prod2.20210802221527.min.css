@@ -1,0 +1,90 @@
+.ds2-model-navigation{margin-bottom:70px;min-height:500px}
+@media only screen and (min-width:521px){.ds2-model-navigation{min-height:550px}
+}
+@media only screen and (min-width:981px){.ds2-model-navigation{margin-bottom:85px}
+}
+@media only screen and (min-width:1275px){.ds2-model-navigation{min-height:570px}
+}
+.ds2-model-navigation .model-nav-holder{position:relative}
+.ds2-model-navigation .ds2-model-menu{position:relative}
+.ds2-model-navigation .model-nav-holder{overflow:hidden;border-bottom:1px solid #e6e6e6;height:63px;margin-bottom:4px}
+@media only screen and (min-width:521px){.ds2-model-navigation .model-nav-holder{height:80px;margin-bottom:5px}
+}
+.ds2-model-navigation .model-nav-holder .model-nav{position:relative;height:inherit}
+.ds2-model-navigation .model-nav-holder .model-nav div{height:inherit}
+.ds2-model-navigation .model-nav-holder .model-nav ul{height:inherit;display:flex;list-style-type:none;margin:0;padding:0}
+.ds2-model-navigation .model-nav-holder .model-nav ul li{height:inherit}
+.ds2-model-navigation .model-nav-holder .model-nav ul li button{height:calc(100% - 1px);width:-webkit-fill-available;margin:0;padding:0 15px;display:flex;align-items:center;color:#666;transition:all .2s ease-in;-webkit-tap-highlight-color:transparent}
+.ds2-model-navigation .model-nav-holder .model-nav ul li button,.ds2-model-navigation .model-nav-holder .model-nav ul li button:hover{background:0}
+.ds2-model-navigation .model-nav-holder .model-nav ul li button:hover,.ds2-model-navigation .model-nav-holder .model-nav ul li.active button{color:#262626}
+.ds2-model-navigation .model-nav-holder .model-nav ul li button:focus-visible{color:#0653b6}
+.ds2-model-navigation .model-nav-holder .model-nav ul li button.focus-visible{color:#0653b6}
+.ds2-model-navigation .model-nav-holder .pad{position:absolute;transition:all .35s ease-in-out;height:4px;background-color:#1c69d4;margin-top:-5px}
+.ds2-model-navigation .model-nav-holder:focus-visible .pad{margin-top:-9px;background:#262626}
+.ds2-model-navigation .model-nav-holder.focus-visible .pad{margin-top:-9px;background:#262626}
+@media only screen and (min-width:981px){.ds2-model-navigation .pad1 .model-nav ul{justify-content:flex-start}
+}
+.ds2-model-navigation .pad2 .model-nav ul,.ds2-model-navigation .pad3 .model-nav ul{overflow:hidden}
+.ds2-model-navigation .pad2 .model-nav ul li,.ds2-model-navigation .pad3 .model-nav ul li{white-space:nowrap}
+.ds2-model-navigation .pad2 .model-nav ul li button,.ds2-model-navigation .pad3 .model-nav ul li button{padding:0 22.5px}
+.ds2-model-navigation .pad3{display:none}
+.ds2-model-navigation.is-touch .pad2 .model-nav ul,.ds2-model-navigation.is-touch .pad3 .model-nav ul{overflow-y:hidden;overflow-x:auto;-ms-overflow-style:none;-webkit-overflow-scrolling:touch}
+@media only screen and (min-width:981px){.ds2-model-navigation .clone{display:none !important}
+}
+.ds2-model-navigation .model-nav-prev-button{z-index:10;position:absolute;left:0;top:0;width:60px;height:100%;background:linear-gradient(to right,#fff 0,#fff 50%,rgba(255,255,255,0)) 100%;cursor:pointer}
+.container--bigger .ds2-model-navigation .model-nav-prev-button{display:none !important}
+.ds2-model-navigation .model-nav-prev-button .icon-arrow-m-left{color:#bbb;line-height:78px;font-size:48px;float:left}
+html[dir=rtl] .ds2-model-navigation .model-nav-prev-button{transform:rotateY(180deg)}
+@media only screen and (max-width:980px){.ds2-model-navigation .model-nav-next-button,.ds2-model-navigation .model-nav-prev-button{display:none !important}
+}
+.ds2-model-navigation .model-nav-next-button{position:absolute;right:0;width:60px;top:0;height:100%;background:linear-gradient(to right,rgba(255,255,255,0) 0,#fff 50%,#fff 100%);cursor:pointer}
+.container--bigger .ds2-model-navigation .model-nav-next-button{display:none !important}
+.ds2-model-navigation .model-nav-next-button .icon-arrow-m-right{color:#bbb;line-height:78px;font-size:48px;float:right}
+html[dir=rtl] .ds2-model-navigation .model-nav-next-button{transform:rotateY(180deg)}
+.ds2-model-navigation .ds2-model-cars{margin-top:40px;display:flex;flex-wrap:wrap;overflow:hidden}
+.ds2-model-navigation .ds2-model-car{overflow:hidden;position:relative;margin-bottom:10px;float:none}
+.ds2-model-navigation .ds2-model-car.hide{height:0}
+.ds2-model-navigation .ds2-model-car:last-child{float:none !important}
+.ds2-model-navigation .ds2-model-car.ds2-model-car--all{overflow:inherit}
+.ds2-model-navigation .ds2-model-car .ds2-model-card--image a img{background-size:100% auto;background-repeat:no-repeat;background-position:center bottom}
+.ds2-model-navigation .ds2-model-car .ds2-model-card{position:relative}
+.ds2-model-navigation .ds2-model-car .ds2-model-card .ds2-model-card--title{display:block;margin-bottom:.5rem;padding-right:15px;color:#262626}
+.ds2-model-navigation .ds2-model-car .ds2-model-card .ds2-model-card--price{margin-top:0;margin-bottom:1rem;min-height:1rem;display:block;padding-right:15px}
+.ds2-model-navigation .ds2-model-car .ds2-model-card .ds2-model-card--price a[href^='tel:']{color:inherit;display:contents;font-size:inherit;font-weight:inherit;margin:0;outline:0;pointer-events:none;text-decoration:none}
+.ds2-model-navigation .ds2-model-car .ds2-model-card .ds2-model-card--price span.ds2-tooltip span.ds2-info-icon{display:inline;cursor:pointer;pointer-events:all}
+.ds2-model-navigation .ds2-model-car .ds2-model-card .ds2-model-card--buttons{min-height:60px}
+.ds2-model-navigation .ds2-model-car .ds2-model-card.car-visible{left:0;opacity:1;transition:opacity .4s ease-in-out}
+.ds2-model-navigation .ds2-model-car .ds2-model-card.car-hidden{left:-100%;opacity:0;transition:opacity .4s ease-in-out}
+@media only screen and (min-width:521px){.ds2-model-navigation .ds2-model-car .ds2-model-card.car-visible{top:0;opacity:1}
+.ds2-model-navigation .ds2-model-car .ds2-model-card.car-hidden{left:0;opacity:0}
+}
+@media only screen and (min-width:981px){.ds2-model-navigation .ds2-model-car .ds2-model-card .ds2-model-card--entry{min-height:160px}
+.ds2-model-navigation .ds2-model-car .ds2-model-card .ds2-model-card--price{min-height:17px}
+}
+.ds2-model-navigation .ds2-model-car .ds2-model-card .ds2-linklist--item{display:block}
+.ds2-model-navigation .ds2-model-car .ds2-model-card .close-button{display:none}
+.ds2-model-navigation .all-content{position:relative;text-align:center;height:50vw}
+@media only screen and (min-width:521px){.ds2-model-navigation .all-content{height:400px}
+}
+.ds2-model-navigation .all-content .all-content--text{position:absolute;width:100%;color:#e6e6e6;top:-5px;white-space:nowrap}
+@media only screen and (min-width:521px){.ds2-model-navigation .all-content .all-content--text{top:60px}
+}
+@media only screen and (min-width:981px){.ds2-model-navigation .all-content .all-content--text{top:40px}
+}
+.ds2-model-navigation .all-content .all-content--image{position:absolute;top:10vw;width:100%}
+@media only screen and (min-width:521px){.ds2-model-navigation .all-content .all-content--image{top:105px}
+}
+.ds2-model-navigation .all-content .all-models-button{margin:auto;width:100%}
+@media only screen and (min-width:521px){.ds2-model-navigation .all-content .all-models-button{width:285px}
+}
+.ds2-model-navigation .all-content .all-content-car-images-container{height:40vw;top:-30px;position:relative}
+@media only screen and (min-width:521px){.ds2-model-navigation .all-content .all-content-car-images-container{height:34vw}
+}
+@media only screen and (min-width:981px){.ds2-model-navigation .all-content .all-content-car-images-container{height:300px}
+}
+.ds2-model-navigation .all-content .all-content-car-images-container .ds2-model-card--street-img{position:absolute;right:0;left:44px;top:25%;bottom:0;margin:auto;z-index:1}
+.ds2-model-navigation .all-content .all-content-car-images-container .all-content-car-image-1{position:absolute;right:auto;left:38%;top:-40%;bottom:0;margin:auto;z-index:4;width:63%}
+.ds2-model-navigation .all-content .all-content-car-images-container .all-content-car-image-2{position:absolute;right:0;left:-11%;top:-37%;bottom:0;margin:auto;z-index:3;width:43%}
+.ds2-model-navigation .all-content .all-content-car-images-container .all-content-car-image-3{position:absolute;right:53%;left:auto;top:-38%;bottom:0;margin:auto;z-index:2;width:29%}
+.ds2-model-navigation .all-content .all-content-car-images-container .all-models-button{bottom:0;position:absolute;z-index:20;left:0;right:0}
+.ds2-model-navigation .all-content .all-model-button-default{bottom:0;position:absolute;z-index:20;left:0;right:0}

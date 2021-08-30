@@ -1,0 +1,46 @@
+var chatID = document.querySelector("#chat_liveagent").getAttribute("data-id");
+var initValue1 = document
+  .querySelector("#chat_liveagent")
+  .getAttribute("data-init1");
+var initValue2 = document
+  .querySelector("#chat_liveagent")
+  .getAttribute("data-init2");
+var initUrl = document
+  .querySelector("#chat_liveagent")
+  .getAttribute("data-url");
+
+// Contruimos el HTML
+var html = `
+	<div class="chat-container">
+		<button  id="liveagent_button_online_${chatID}" type="button" class="btn-container" style="display:none"></button>
+	</div>
+`;
+var tempDiv = document.createElement("div"); //button container
+tempDiv.innerHTML = html;
+document.body.appendChild(tempDiv);
+
+//Le damos funcionalidad
+document
+  .querySelector("#bmw_chat_liveagent")
+  .addEventListener("load", function () {
+    //Al boton del liveagent
+    document
+      .querySelector("#liveagent_button_online_" + chatID)
+      .addEventListener("click", function () {
+        liveagent.startChat(chatID);
+      });
+
+    if (!window._laq) {
+      window._laq = [];
+    }
+
+    window._laq.push(function () {
+      liveagent.showWhenOnline(
+        chatID,
+        document.querySelector(".btn-container")
+      );
+      //liveagent.showWhenOffline(chatID, document.getElementById('liveagent_button_offline_'+chatID));
+    });
+
+    liveagent.init(initUrl, initValue1, initValue2);
+  });

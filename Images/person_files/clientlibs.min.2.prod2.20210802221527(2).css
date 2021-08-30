@@ -1,0 +1,125 @@
+.ds2-mood-preconfiguration{opacity:0;margin:0 -20px !important;transition:opacity .3s ease-out}
+@media(min-width:521px){.ds2-mood-preconfiguration{margin:0 -45px !important}
+}
+@media(min-width:981px){.ds2-mood-preconfiguration{margin:0 !important}
+}
+.ds2-mood-preconfiguration--fade-in{opacity:1}
+.ds2-mood-preconfiguration__headline-section{margin-left:20px;margin-right:20px;margin-bottom:30px}
+@media(min-width:521px){.ds2-mood-preconfiguration__headline-section{margin-left:45px;margin-right:45px}
+}
+@media(min-width:981px){.ds2-mood-preconfiguration__headline-section{margin-left:0;margin-right:0}
+}
+.ds2-mood-preconfiguration__container{padding:0 20px !important}
+@media(min-width:521px){.ds2-mood-preconfiguration__container{padding:0 45px !important}
+}
+@media(min-width:981px){.ds2-mood-preconfiguration__container{padding:0 0 !important}
+}
+@media(min-width:981px){.ds2-mood-preconfiguration__wrapper{transform:translate3d(0,0,0) !important}
+}
+.ds2-mood-preconfiguration__pagination{opacity:0;transition:opacity .3s ease-out;position:relative}
+@media(min-width:981px){.ds2-mood-preconfiguration__pagination{display:none}
+}
+.ds2-mood-preconfiguration__pagination--fade-in{opacity:1}
+.ds2-mood-preconfiguration__pagination span{width:10px !important;height:10px !important;margin-right:15px}
+.ds2-mood-preconfiguration__pagination span:focus{outline:0}
+.ds2-mood-preconfiguration__pagination span:last-child{margin-right:0}
+.ds2-mood-preconfiguration__pagination .swiper-pagination-bullet{transition:left .3s ease-out;opacity:1;background-color:#bbb;vertical-align:middle}
+.ds2-mood-preconfiguration__pagination .swiper-pagination-bullet:hover{background-color:#262626}
+.ds2-mood-preconfiguration__pagination .swiper-pagination-bullet-active{background-color:#1c69d4;opacity:1;transform:scale3d(1.2,1.2,1) !important}
+.ds2-mood-preconfiguration__pagination .swiper-pagination-bullet-active:hover{background-color:#1c69d4}
+.ds2-mood-preconfiguration .swiper-container{margin:0 auto;position:relative;overflow:hidden;list-style:none;padding:0;z-index:1}
+.ds2-mood-preconfiguration .swiper-container-no-flexbox .swiper-slide{float:left}
+.ds2-mood-preconfiguration .swiper-container-vertical>.swiper-wrapper{flex-direction:column}
+.ds2-mood-preconfiguration .swiper-wrapper{position:relative;width:100%;height:100%;z-index:1;display:flex;transition-property:transform;box-sizing:content-box}
+.ds2-mood-preconfiguration .swiper-container-android .swiper-slide,.ds2-mood-preconfiguration .swiper-wrapper{transform:translate3d(0,0,0)}
+.ds2-mood-preconfiguration .swiper-container-multirow>.swiper-wrapper{flex-wrap:wrap}
+.ds2-mood-preconfiguration .swiper-container-free-mode>.swiper-wrapper{transition-timing-function:ease-out;margin:0 auto}
+.ds2-mood-preconfiguration .swiper-slide{flex-shrink:0;width:100%;height:100%;position:relative;transition-property:transform}
+.ds2-mood-preconfiguration .swiper-slide-invisible-blank{visibility:hidden}
+.ds2-mood-preconfiguration .swiper-container-autoheight,.ds2-mood-preconfiguration .swiper-container-autoheight .swiper-slide{height:auto}
+.ds2-mood-preconfiguration .swiper-container-autoheight .swiper-wrapper{align-items:flex-start;transition-property:transform,height}
+.ds2-mood-preconfiguration .swiper-container-3d{perspective:1200px}
+.ds2-mood-preconfiguration .swiper-container-3d .swiper-cube-shadow,.ds2-mood-preconfiguration .swiper-container-3d .swiper-slide,.ds2-mood-preconfiguration .swiper-container-3d .swiper-slide-shadow-bottom,.ds2-mood-preconfiguration .swiper-container-3d .swiper-slide-shadow-left,.ds2-mood-preconfiguration .swiper-container-3d .swiper-slide-shadow-right,.ds2-mood-preconfiguration .swiper-container-3d .swiper-slide-shadow-top,.ds2-mood-preconfiguration .swiper-container-3d .swiper-wrapper{transform-style:preserve-3d}
+.ds2-mood-preconfiguration .swiper-container-3d .swiper-slide-shadow-bottom,.ds2-mood-preconfiguration .swiper-container-3d .swiper-slide-shadow-left,.ds2-mood-preconfiguration .swiper-container-3d .swiper-slide-shadow-right,.ds2-mood-preconfiguration .swiper-container-3d .swiper-slide-shadow-top{position:absolute;left:0;top:0;width:100%;height:100%;pointer-events:none;z-index:10}
+.ds2-mood-preconfiguration .swiper-container-3d .swiper-slide-shadow-left{background-image:linear-gradient(to left,rgba(0,0,0,.5),rgba(0,0,0,0))}
+.ds2-mood-preconfiguration .swiper-container-3d .swiper-slide-shadow-right{background-image:linear-gradient(to right,rgba(0,0,0,.5),rgba(0,0,0,0))}
+.ds2-mood-preconfiguration .swiper-container-3d .swiper-slide-shadow-top{background-image:linear-gradient(to top,rgba(0,0,0,.5),rgba(0,0,0,0))}
+.ds2-mood-preconfiguration .swiper-container-3d .swiper-slide-shadow-bottom{background-image:linear-gradient(to bottom,rgba(0,0,0,.5),rgba(0,0,0,0))}
+.ds2-mood-preconfiguration .swiper-container-wp8-horizontal,.ds2-mood-preconfiguration .swiper-container-wp8-horizontal>.swiper-wrapper{touch-action:pan-y}
+.ds2-mood-preconfiguration .swiper-container-wp8-vertical,.ds2-mood-preconfiguration .swiper-container-wp8-vertical>.swiper-wrapper{touch-action:pan-x}
+.ds2-mood-preconfiguration .swiper-button-next,.ds2-mood-preconfiguration .swiper-button-prev{position:absolute;top:50%;width:27px;height:44px;margin-top:-22px;z-index:10;cursor:pointer;background-size:27px 44px;background-position:center;background-repeat:no-repeat}
+.ds2-mood-preconfiguration .swiper-button-next.swiper-button-disabled,.ds2-mood-preconfiguration .swiper-button-prev.swiper-button-disabled{opacity:.35;cursor:auto;pointer-events:none}
+.ds2-mood-preconfiguration .swiper-button-prev,.ds2-mood-preconfiguration .swiper-container-rtl .swiper-button-next{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23007aff'%2F%3E%3C%2Fsvg%3E");left:10px;right:auto}
+.ds2-mood-preconfiguration .swiper-button-next,.ds2-mood-preconfiguration .swiper-container-rtl .swiper-button-prev{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23007aff'%2F%3E%3C%2Fsvg%3E");right:10px;left:auto}
+.ds2-mood-preconfiguration .swiper-button-prev.swiper-button-white,.ds2-mood-preconfiguration .swiper-container-rtl .swiper-button-next.swiper-button-white{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23ffffff'%2F%3E%3C%2Fsvg%3E")}
+.ds2-mood-preconfiguration .swiper-button-next.swiper-button-white,.ds2-mood-preconfiguration .swiper-container-rtl .swiper-button-prev.swiper-button-white{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23ffffff'%2F%3E%3C%2Fsvg%3E")}
+.ds2-mood-preconfiguration .swiper-button-prev.swiper-button-black,.ds2-mood-preconfiguration .swiper-container-rtl .swiper-button-next.swiper-button-black{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23000000'%2F%3E%3C%2Fsvg%3E")}
+.ds2-mood-preconfiguration .swiper-button-next.swiper-button-black,.ds2-mood-preconfiguration .swiper-container-rtl .swiper-button-prev.swiper-button-black{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23000000'%2F%3E%3C%2Fsvg%3E")}
+.ds2-mood-preconfiguration .swiper-button-lock{display:none}
+.ds2-mood-preconfiguration .swiper-pagination{position:absolute;text-align:center;transition:.3s opacity;transform:translate3d(0,0,0);z-index:10}
+.ds2-mood-preconfiguration .swiper-pagination.swiper-pagination-hidden{opacity:0}
+.ds2-mood-preconfiguration .swiper-container-horizontal>.swiper-pagination-bullets,.ds2-mood-preconfiguration .swiper-pagination-custom,.ds2-mood-preconfiguration .swiper-pagination-fraction{bottom:10px;left:0;width:100%}
+.ds2-mood-preconfiguration .swiper-pagination-bullets-dynamic{overflow:hidden;color:rgba(255,255,255,0)}
+.ds2-mood-preconfiguration .swiper-pagination-bullets-dynamic .swiper-pagination-bullet{transform:scale(.33);position:relative}
+.ds2-mood-preconfiguration .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active,.ds2-mood-preconfiguration .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-main{transform:scale(1)}
+.ds2-mood-preconfiguration .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next,.ds2-mood-preconfiguration .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-prev{transform:scale(.66)}
+.ds2-mood-preconfiguration .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next-next,.ds2-mood-preconfiguration .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-prev-prev{transform:scale(.33)}
+.ds2-mood-preconfiguration .swiper-pagination-bullet{width:8px;height:8px;display:inline-block;border-radius:100%;background:#000;opacity:.2}
+.ds2-mood-preconfiguration button.swiper-pagination-bullet{border:0;margin:0;padding:0;box-shadow:none;-webkit-appearance:none;-moz-appearance:none;appearance:none}
+.ds2-mood-preconfiguration .swiper-pagination-clickable .swiper-pagination-bullet{cursor:pointer}
+.ds2-mood-preconfiguration .swiper-pagination-bullet-active{opacity:1;background:#007aff}
+.ds2-mood-preconfiguration .swiper-container-vertical>.swiper-pagination-bullets{right:10px;top:50%;transform:translate3d(0,-50%,0)}
+.ds2-mood-preconfiguration .swiper-container-vertical>.swiper-pagination-bullets .swiper-pagination-bullet{margin:6px 0;display:block}
+.ds2-mood-preconfiguration .swiper-container-vertical>.swiper-pagination-bullets.swiper-pagination-bullets-dynamic{top:50%;transform:translateY(-50%);width:8px}
+.ds2-mood-preconfiguration .swiper-container-vertical>.swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet{display:inline-block;transition:.2s transform,.2s top}
+.ds2-mood-preconfiguration .swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet{margin:0 4px}
+.ds2-mood-preconfiguration .swiper-container-horizontal>.swiper-pagination-bullets.swiper-pagination-bullets-dynamic{left:50%;transform:translateX(-50%);white-space:nowrap}
+.ds2-mood-preconfiguration .swiper-container-horizontal>.swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet{transition:.2s transform,.2s left}
+.ds2-mood-preconfiguration .swiper-container-horizontal.swiper-container-rtl>.swiper-pagination-bullets-dynamic .swiper-pagination-bullet{transition:.2s transform,.2s right}
+.ds2-mood-preconfiguration .swiper-pagination-progressbar{background:rgba(0,0,0,.25);position:absolute}
+.ds2-mood-preconfiguration .swiper-pagination-progressbar .swiper-pagination-progressbar-fill{background:#007aff;position:absolute;left:0;top:0;width:100%;height:100%;transform:scale(0);transform-origin:left top}
+.ds2-mood-preconfiguration .swiper-container-rtl .swiper-pagination-progressbar .swiper-pagination-progressbar-fill{transform-origin:right top}
+.ds2-mood-preconfiguration .swiper-container-horizontal>.swiper-pagination-progressbar,.ds2-mood-preconfiguration .swiper-container-vertical>.swiper-pagination-progressbar.swiper-pagination-progressbar-opposite{width:100%;height:4px;left:0;top:0}
+.ds2-mood-preconfiguration .swiper-container-horizontal>.swiper-pagination-progressbar.swiper-pagination-progressbar-opposite,.ds2-mood-preconfiguration .swiper-container-vertical>.swiper-pagination-progressbar{width:4px;height:100%;left:0;top:0}
+.ds2-mood-preconfiguration .swiper-pagination-white .swiper-pagination-bullet-active{background:#fff}
+.ds2-mood-preconfiguration .swiper-pagination-progressbar.swiper-pagination-white{background:rgba(255,255,255,.25)}
+.ds2-mood-preconfiguration .swiper-pagination-progressbar.swiper-pagination-white .swiper-pagination-progressbar-fill{background:#fff}
+.ds2-mood-preconfiguration .swiper-pagination-black .swiper-pagination-bullet-active{background:#000}
+.ds2-mood-preconfiguration .swiper-pagination-progressbar.swiper-pagination-black{background:rgba(0,0,0,.25)}
+.ds2-mood-preconfiguration .swiper-pagination-progressbar.swiper-pagination-black .swiper-pagination-progressbar-fill{background:#000}
+.ds2-mood-preconfiguration .swiper-pagination-lock{display:none}
+.ds2-mood-preconfiguration .swiper-scrollbar{border-radius:10px;position:relative;-ms-touch-action:none;background:rgba(0,0,0,.1)}
+.ds2-mood-preconfiguration .swiper-container-horizontal>.swiper-scrollbar{position:absolute;left:1%;bottom:3px;z-index:50;height:5px;width:98%}
+.ds2-mood-preconfiguration .swiper-container-vertical>.swiper-scrollbar{position:absolute;right:3px;top:1%;z-index:50;width:5px;height:98%}
+.ds2-mood-preconfiguration .swiper-scrollbar-drag{height:100%;width:100%;position:relative;background:rgba(0,0,0,.5);border-radius:10px;left:0;top:0}
+.ds2-mood-preconfiguration .swiper-scrollbar-cursor-drag{cursor:move}
+.ds2-mood-preconfiguration .swiper-scrollbar-lock{display:none}
+.ds2-mood-preconfiguration .swiper-zoom-container{width:100%;height:100%;display:flex;justify-content:center;align-items:center;text-align:center}
+.ds2-mood-preconfiguration .swiper-zoom-container>canvas,.ds2-mood-preconfiguration .swiper-zoom-container>img,.ds2-mood-preconfiguration .swiper-zoom-container>svg{max-width:100%;max-height:100%;-o-object-fit:contain;object-fit:contain}
+.ds2-mood-preconfiguration .swiper-slide-zoomed{cursor:move}
+.ds2-mood-preconfiguration .swiper-lazy-preloader{width:42px;height:42px;position:absolute;left:50%;top:50%;margin-left:-21px;margin-top:-21px;z-index:10;transform-origin:50%;-webkit-animation:swiper-preloader-spin 1s steps(12,end) infinite;animation:swiper-preloader-spin 1s steps(12,end) infinite}
+.ds2-mood-preconfiguration .swiper-lazy-preloader:after{display:block;content:"";width:100%;height:100%;background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg%20viewBox%3D'0%200%20120%20120'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20xmlns%3Axlink%3D'http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink'%3E%3Cdefs%3E%3Cline%20id%3D'l'%20x1%3D'60'%20x2%3D'60'%20y1%3D'7'%20y2%3D'27'%20stroke%3D'%236c6c6c'%20stroke-width%3D'11'%20stroke-linecap%3D'round'%2F%3E%3C%2Fdefs%3E%3Cg%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(30%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(60%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(90%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(120%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(150%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.37'%20transform%3D'rotate(180%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.46'%20transform%3D'rotate(210%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.56'%20transform%3D'rotate(240%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.66'%20transform%3D'rotate(270%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.75'%20transform%3D'rotate(300%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.85'%20transform%3D'rotate(330%2060%2C60)'%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");background-position:50%;background-size:100%;background-repeat:no-repeat}
+.ds2-mood-preconfiguration .swiper-lazy-preloader-white:after{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg%20viewBox%3D'0%200%20120%20120'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20xmlns%3Axlink%3D'http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink'%3E%3Cdefs%3E%3Cline%20id%3D'l'%20x1%3D'60'%20x2%3D'60'%20y1%3D'7'%20y2%3D'27'%20stroke%3D'%23fff'%20stroke-width%3D'11'%20stroke-linecap%3D'round'%2F%3E%3C%2Fdefs%3E%3Cg%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(30%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(60%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(90%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(120%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(150%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.37'%20transform%3D'rotate(180%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.46'%20transform%3D'rotate(210%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.56'%20transform%3D'rotate(240%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.66'%20transform%3D'rotate(270%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.75'%20transform%3D'rotate(300%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.85'%20transform%3D'rotate(330%2060%2C60)'%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E")}
+@-webkit-keyframes swiper-preloader-spin{100%{transform:rotate(360deg)}
+}
+@keyframes swiper-preloader-spin{100%{transform:rotate(360deg)}
+}
+.ds2-mood-preconfiguration .swiper-container .swiper-notification{position:absolute;left:0;top:0;pointer-events:none;opacity:0;z-index:-1000}
+.ds2-mood-preconfiguration .swiper-container-fade.swiper-container-free-mode .swiper-slide{transition-timing-function:ease-out}
+.ds2-mood-preconfiguration .swiper-container-fade .swiper-slide{pointer-events:none;transition-property:opacity}
+.ds2-mood-preconfiguration .swiper-container-fade .swiper-slide .swiper-slide{pointer-events:none}
+.ds2-mood-preconfiguration .swiper-container-fade .swiper-slide-active,.ds2-mood-preconfiguration .swiper-container-fade .swiper-slide-active .swiper-slide-active{pointer-events:auto}
+.ds2-mood-preconfiguration .swiper-container-cube{overflow:visible}
+.ds2-mood-preconfiguration .swiper-container-cube .swiper-slide{pointer-events:none;-webkit-backface-visibility:hidden;backface-visibility:hidden;z-index:1;visibility:hidden;transform-origin:0 0;width:100%;height:100%}
+.ds2-mood-preconfiguration .swiper-container-cube .swiper-slide .swiper-slide{pointer-events:none}
+.ds2-mood-preconfiguration .swiper-container-cube.swiper-container-rtl .swiper-slide{transform-origin:100% 0}
+.ds2-mood-preconfiguration .swiper-container-cube .swiper-slide-active,.ds2-mood-preconfiguration .swiper-container-cube .swiper-slide-active .swiper-slide-active{pointer-events:auto}
+.ds2-mood-preconfiguration .swiper-container-cube .swiper-slide-active,.ds2-mood-preconfiguration .swiper-container-cube .swiper-slide-next,.ds2-mood-preconfiguration .swiper-container-cube .swiper-slide-next+.swiper-slide,.ds2-mood-preconfiguration .swiper-container-cube .swiper-slide-prev{pointer-events:auto;visibility:visible}
+.ds2-mood-preconfiguration .swiper-container-cube .swiper-slide-shadow-bottom,.ds2-mood-preconfiguration .swiper-container-cube .swiper-slide-shadow-left,.ds2-mood-preconfiguration .swiper-container-cube .swiper-slide-shadow-right,.ds2-mood-preconfiguration .swiper-container-cube .swiper-slide-shadow-top{z-index:0;-webkit-backface-visibility:hidden;backface-visibility:hidden}
+.ds2-mood-preconfiguration .swiper-container-cube .swiper-cube-shadow{position:absolute;left:0;bottom:0;width:100%;height:100%;background:#000;opacity:.6;-webkit-filter:blur(50px);filter:blur(50px);z-index:0}
+.ds2-mood-preconfiguration .swiper-container-flip{overflow:visible}
+.ds2-mood-preconfiguration .swiper-container-flip .swiper-slide{pointer-events:none;-webkit-backface-visibility:hidden;backface-visibility:hidden;z-index:1}
+.ds2-mood-preconfiguration .swiper-container-flip .swiper-slide .swiper-slide{pointer-events:none}
+.ds2-mood-preconfiguration .swiper-container-flip .swiper-slide-active,.ds2-mood-preconfiguration .swiper-container-flip .swiper-slide-active .swiper-slide-active{pointer-events:auto}
+.ds2-mood-preconfiguration .swiper-container-flip .swiper-slide-shadow-bottom,.ds2-mood-preconfiguration .swiper-container-flip .swiper-slide-shadow-left,.ds2-mood-preconfiguration .swiper-container-flip .swiper-slide-shadow-right,.ds2-mood-preconfiguration .swiper-container-flip .swiper-slide-shadow-top{z-index:0;-webkit-backface-visibility:hidden;backface-visibility:hidden}
+.ds2-mood-preconfiguration .swiper-container-coverflow .swiper-wrapper{-ms-perspective:1200px}
