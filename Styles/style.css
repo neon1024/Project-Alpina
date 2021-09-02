@@ -10,7 +10,7 @@
 
 .background-image-header {
 
-    background-image: url("/Project\ Alpina/Images/bmw2.jpg");
+    background-image: url("/Images/bmw2.jpg");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -263,7 +263,7 @@ span img  {
 }
 
 .left-image {
-    background-image: url("/Project\ Alpina/Images/bmw_ix3.jpg");
+    background-image: url("/Images/bmw_ix3.jpg");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -280,7 +280,7 @@ span img  {
 }
 
 .right-image {
-    background-image: url("/Project\ Alpina/Images/dealership.jpg");
+    background-image: url("/Images/dealership.jpg");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
