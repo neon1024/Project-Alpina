@@ -1,1 +1,0 @@
-(function() {var script = document.createElement("script");script.src = "https://emea-bmw.netmng.com/?url=" + encodeURIComponent(window.location.href) + "&aid=4797&siclientid=101342";script.type = "text/javascript";try { if (!!window.location.href) { document.getElementsByTagName("head")[0].appendChild(script); }} catch (e) {}})();

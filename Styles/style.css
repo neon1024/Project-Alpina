@@ -8,12 +8,20 @@
     scroll-behavior: smooth;
 }
 
-.background-image-header {
+html {
+    scroll-behavior: smooth;
+}
 
-    background-image: url("/Images/bmw2.jpg");
+body {  /* for the card container bug */
+    overflow-x: hidden;
+}
+
+.background-image-header {
+    background-image: url("../Images/bmw2.jpg");
     background-position: center center;
-    background-repeat: no-repeat;
     background-size: cover;
+
+    box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, .9);
 }
 
 nav {
@@ -27,24 +35,47 @@ nav {
     border-style: solid;
 
     border-bottom-width: 2px;
+    border-bottom-color: black;
 
     margin: 0 10vw 0 10vw;
 
+    animation-name: navBorderAppear;
+    animation-duration: 2.5s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-timing-function: ease-in-out;
 }
+
+button {
+    background-color: transparent;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* essential classes start */
+
+.center {   /* for the button "Discover" */
+    position: block;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    display: flex;
+
+    justify-content: center;
+}
+
+/* essential classes end */
 
 .menu {
     display: flex;
     justify-content: space-between;
-}
 
-.nav-title {
-    color: black;
-    font-size: 1.5vw;
-}
-
-.nav-title::selection {
-    color: white;
-    background-color: rgba(0,125,255, 0.5);
+    animation-name: menuAppear;
+    animation-duration: 2s;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-timing-function: ease-in-out;
 }
 
 .nav-title {
@@ -52,7 +83,18 @@ nav {
     border-style: solid;
     border-bottom-width: 5px;
     border-bottom-color: transparent;
+
     padding: 1.72vw;
+
+    color: black;
+    font-size: 1.5vw;
+
+    cursor: pointer;
+}
+
+.nav-title::selection {
+    color: white;
+    background-color: rgba(0,125,255, 0.5);
 }
 
 .nav-title:hover {
@@ -94,6 +136,13 @@ nav {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+
+    animation-name: navAppear;
+    animation-duration: 1s;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-timing-function: ease-in-out;
 }
 
 .utilities-logo-container span a {
@@ -105,7 +154,7 @@ nav {
     border-style: solid;
     border-bottom-width: 5px;
     border-bottom-color: transparent;
-    padding: 1.89vw 1vw 1.89vw 1vw; /* wrap these elements in a span to align them properly */
+    padding: 1.899999vw 1vw 1.899999vw 1vw; /* wrap these elements in a span to align them properly */
 }
 
 .search:hover {
@@ -117,6 +166,8 @@ nav {
     border-bottom-width: 5px;
     border-bottom-color: transparent;
     padding: 1.89vw 1vw 1.89vw 1vw;
+
+    cursor: pointer;
 }
 
 .account:hover {
@@ -130,6 +181,8 @@ nav {
     padding: 1.89vw 1vw 1.89vw 1vw;
 
     margin-right: 1vw;
+
+    cursor: pointer;
 }
 
 .location:hover {
@@ -150,7 +203,21 @@ span img  {
     padding: 10vw 0 10vw 10vw;
 
     width: fit-content;
+
+    animation-name: modelContainerAppear;
+    animation-duration: 2s;
+    animation-direction: normal;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
     
+}
+
+@keyframes modelContainerAppear {
+
+    0% {margin-left: -18900px;}
+    50% {margin-left: -750px;}
+    100% {margin-left: 0;}
+
 }
 
 .model-container span {
@@ -160,6 +227,8 @@ span img  {
 .model-name {
     font-size: 4vw;
     color: white;
+
+    text-shadow: 2px 2px rgb(0, 125, 255);
 }
 
 .model-name::selection {
@@ -168,10 +237,15 @@ span img  {
 }
 
 .model-information {
-    font-size: 3vw;
+    font-size: 2vw;
     color: white;
 
-    margin: 0vw 0 0vw 0;
+    margin: 1vw 0 1vw 0;
+
+    width: 70%;
+
+    text-shadow: 2px 2px black;
+
 }
 
 .model-information::selection {
@@ -188,7 +262,7 @@ span img  {
 }
 
 .blue-info-btn {
-    font-size: 1vw;
+    font-size: 1.25vw;
     color: white;
     font-weight: bold;
 
@@ -203,6 +277,15 @@ span img  {
     border-color: #007DFF;
 
     width: 20vw;
+
+    cursor: pointer;
+}
+
+.blue-info-btn:hover {
+    background-color: rgba(0,90,255, 1);
+    border-color: rgba(0,90,255, 1);
+
+    box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, .9);
 }
 
 .blue-info-btn::selection {
@@ -223,6 +306,15 @@ span img  {
     border-color: white;
 
     width: 20vw;
+
+    cursor: pointer;
+}
+
+.info-btn:hover {
+    color: darkgray;
+    border-color: darkgrey;
+
+    box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, .9);
 }
 
 .info-btn::selection{
@@ -238,6 +330,11 @@ span img  {
     justify-content: space-between;
 
     padding: .5vw;
+
+    margin: 2vw 0 2vw 0;
+
+    /* box-shadow: 0px 0px 16px 8px rgba(0, 0, 0, .9); */
+    box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, .9);
 
 }
 
@@ -263,7 +360,7 @@ span img  {
 }
 
 .left-image {
-    background-image: url("/Images/bmw_ix3.jpg");
+    background-image: url("../Images/bmw_ix3_house.jpg");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -280,7 +377,7 @@ span img  {
 }
 
 .right-image {
-    background-image: url("/Images/dealership.jpg");
+    background-image: url("../Images/dealership.jpg");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -314,12 +411,495 @@ img {
     box-shadow: 0 0 12px 0 rgba(0, 0, 0, .25);
     z-index: 1;
 
-    margin-top: auto;
+    margin-top: 2.05vw;
+    margin-left: .01vw;
+
+    width: 953%;
 }
 
-.models-dropdown-menu-container:hover .models-dropdown-menu {
+.models-dropdown-menu ul {
+    flex-direction: column;
+
+    width: fit-content;
+}
+
+.all-the-models-container {
+    border-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: grey;
+
+    width: 76vw;
+
+    padding: 1vw 0 1vw 0;
+
+    justify-content: center;
+
+}
+
+.all-the-models-container ul {
+    flex-direction: row;
+    
+    margin-left: auto;
+    margin-right: auto;
+
+    text-align: center;
+}
+
+.all-the-models-container ul li {
+    margin-left: 1vw;
+    margin-right: 1vw;
+}
+
+.all-the-models-container ul li button {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 1.5vw;
+    color: grey;
+
+    background-color: transparent;
+}
+
+.all-the-models-container ul li button:hover {
+    color: #007DFF;
+
+    cursor: pointer;
+}
+
+.option-All-the-models-content {
+    display: none;
+
+    width: 100%;
+
+    padding: 2vw;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.option-All-the-models-content img {
+    width: 100%;
+}
+
+/* all the models section image puzzle start */
+
+.All-the-Models-title {
+    text-align: center;
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 7vw;
+
+    color: rgba(0, 0, 0, .15);
+
+    position: absolute;
+
+    top: 28%;
+
+    left: 50%;
+    transform: translate(-50%);
+
+    width: fit-content;
+
+    z-index: 1;
+}
+
+#piece1 {
+    width: 20%;
+
+    position: absolute;
+
+    z-index: 2;
+
+    top: 40%;
+
+    left: 28%;
+}
+
+#piece2 {
+    width: 28%;
+
+    position: absolute;
+
+    z-index: 3;
+
+    top: 35%;
+
+    left: 32%;
+}
+
+#piece3 {
+    width: 40%;
+
+    position: absolute;
+
+    z-index: 4;
+
+    top: 27%;
+
+    left: 42%;
+
+}
+
+#piece4 {
+    width: 60%;
+
+    /* position: absolute; */
+
+    margin-top: 18%;
+
+    margin-left: 50%;
+    transform: translate(-50%);
+
+    z-index: 1;
+}
+
+/* all the models section image puzzle end */
+
+.discover-btn button {
+    border-style: solid;
+    border-width: 2px;
+    border-color: transparent;
+}
+
+.discover-btn:hover button {
+    background-color: white;
+
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+
+    color: black;
+}
+
+.option-1-content {
+    display: none;
+
+    width: 100%;
+
+    padding: 2vw;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.option-1-content img {
+    width: 100%;
+}
+
+.option-2-content {
+    display: none;
+
+    width: 100%;
+
+    padding: 2vw;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.option-2-content img {
+    width: 100%;
+}
+
+.option-3-content {
+    display: none;
+
+    width: 100%;
+
+    padding: 2vw;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.option-3-content img {
+    width: 100%
+}
+
+.option-4-content {
+    display: none;
+
+    width: 100%;
+
+    padding: 2vw;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.option-4-content img {
+    width: 100%;
+}
+
+.option-5-content {
+    display: none;
+
+    width: 100%;
+
+    padding: 2vw;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.option-5-content img {
+    width: 100%
+}
+
+.option-6-content {
+    display: none;
+
+    width: 100%;
+
+    padding: 2vw;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.option-6-content img {
+    width: 100%;
+}
+
+.option-7-content {
+    display: none;
+
+    width: 100%;
+
+    padding: 2vw;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.option-7-content img {
+    width: 100%;
+}
+
+.option-8-content {
+    display: none;
+
+    width: 100%;
+
+    padding: 2vw;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.option-8-content img {
+    width: 100%;
+}
+
+.option-X-content {
+    display: none;
+
+    width: 100%;
+
+    padding: 2vw;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.option-X-content img {
+    width: 100%;
+}
+
+.option-Z-content {
+    display: none;
+    
+    width: 100%;
+
+    padding: 2vw;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.option-Z-content img {
+    width: 100%;
+}
+
+.option-M-content {
+    display: none;
+
+    width: 100%;
+
+    padding: 2vw;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.option-M-content img {
+    width: 100%;
+}
+
+.option-i-content {
+    display: none;
+
+    width: 100%;
+
+    padding: 2vw;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.option-i-content img {
+    width: 100%
+}
+
+.option-Plug-in-Hybrids {
+    display: none;
+
+    width: 100%;
+
+    padding: 2vw;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.option-Plug-in-Hybrids img {
+    width: 100%;
+}
+
+.option-Concept-Cars {
+    display: none;
+
+    width: 100%;
+
+    padding: 2vw;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.option-Concept-Cars img {
+    width: 100%;
+}
+
+/* car cards start */
+
+.car-details-container {
+    width: 24vw;
+    height: auto;
+
+    padding: 1vw;
+
+    float: left;
+
     display: block;
 }
+
+.car-details-container img {    /* car image size */
+    width: 80%;
+
+    margin-top: -3vw;
+}
+
+.car-name {
+    text-align: left;
+
+    font-family: 'Roboto', sans-serif;
+    font-weight: lighter;
+    font-size: 1.5vw;
+    color: black;
+}
+
+.car-info {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 1vw;
+
+    flex-direction: row;
+
+    display: flex;
+
+    width: 100%;
+
+    margin: .5vw 0 .5vw 0;
+
+}
+
+#car-info-p3 {
+    color: #007DFF;
+}
+
+#car-info-p2, #car-info-p3 {
+    margin-left: 1vw;
+}
+
+#car-info-price {
+    font-family: 'Roboto', sans-serif;
+    font-weight: lighter;
+    font-size: 1.5vw;
+    color: grey;
+}
+
+.new-tag {
+    position: relative;
+
+    background-color: black;
+
+    padding: .25vw .5vw .25vw .5vw;
+
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 1.25vw;
+    color: white;
+
+    width: fit-content;
+
+    left: 80%;
+
+    z-index: 99999;
+
+}
+
+.dummy-tag {    /* for filling the tag space */
+    position: relative;
+
+    background-color: white;
+
+    padding: .25vw .5vw .25vw .5vw;
+
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 1.25vw;
+    color: white;
+
+    width: fit-content;
+
+    left: 80%;
+
+    z-index: 99999;
+}
+
+.type-logo {
+    width: 20%;
+    height: auto;
+
+    position: relative;
+
+    margin-top: -1.5vw;
+
+    opacity: 1;
+}
+
+.dummy-logo {   /* for filling the type space */
+    width: 20%;
+    height: auto;
+
+    position: relative;
+
+    margin-top: -1.5vw;
+
+    opacity: 0;
+}
+
+/* car cards end */
 
 .search-and-buy-dropdown-menu-container {
     display: inline-block;
@@ -327,20 +907,25 @@ img {
 }
 
 .search-and-buy-dropdown-menu {
+
     display: none;
     position: absolute;
     padding: 1vw;
     background-color: white;
-    box-shadow: 0 12px 12px 12px rgba(0, 0, 0, .25);
+    box-shadow: 0 0 12px 0 rgba(0, 0, 0, .25);
     z-index: 1;
 
-    left: 10%;
+    margin-top: 2.05vw;
+    margin-left: -8.3vw;
 
-    width: 80%;
+    width: 652%;
+
 }
 
-.search-and-buy-dropdown-menu-container:hover .search-and-buy-dropdown-menu {
-    display: block;
+.search-and-buy-dropdown-menu li {
+    flex-direction: column;
+
+    width: fit-content;
 }
 
 .electric-mobility-dropdown-menu-container {
@@ -349,20 +934,25 @@ img {
 }
 
 .electric-mobility-dropdown-menu {
+
     display: none;
     position: absolute;
     padding: 1vw;
     background-color: white;
-    box-shadow: 0 12px 12px 12px rgba(0, 0, 0, .25);
+    box-shadow: 0 0 12px 0 rgba(0, 0, 0, .25);
     z-index: 1;
 
-    left: 10%;
+    margin-top: 2.05vw;
+    margin-left: -20.38vw;
 
-    width: 80%;
+    width: 571.5%;
+
 }
 
-.electric-mobility-dropdown-menu-container:hover .electric-mobility-dropdown-menu {
-    display: block;
+.electric-mobility-dropdown-menu li {
+    flex-direction: column;
+
+    width: fit-content;
 }
 
 .owners-dropdown-menu-container {
@@ -371,20 +961,25 @@ img {
 }
 
 .owners-dropdown-menu {
+
     display: none;
     position: absolute;
     padding: 1vw;
     background-color: white;
-    box-shadow: 0 12px 12px 12px rgba(0, 0, 0, .25);
+    box-shadow: 0 0 12px 0 rgba(0, 0, 0, .25);
     z-index: 1;
 
-    left: 10%;
+    margin-top: 2.05vw;
+    margin-left: -34.18vw;
 
-    width: 80%;
+    width: 933.5%;
+
 }
 
-.owners-dropdown-menu-container:hover .owners-dropdown-menu {
-    display: block;
+.owners-dropdown-menu li {
+    flex-direction: column;
+
+    width: fit-content;
 }
 
 .bmw-world-dropdown-menu-container {
@@ -393,50 +988,156 @@ img {
 }
 
 .bmw-world-dropdown-menu {
+    
     display: none;
     position: absolute;
     padding: 1vw;
     background-color: white;
-    box-shadow: 0 12px 12px 12px rgba(0, 0, 0, .25);
+    box-shadow: 0 0 12px 0 rgba(0, 0, 0, .25);
     z-index: 1;
 
-    left: 10%;
+    margin-top: 2.05vw;
+    margin-left: -42.62vw;
 
-    width: 80%;
+    width: 704%;
+
 }
 
-.bmw-world-dropdown-menu-container:hover .bmw-world-dropdown-menu {
-    display: block;
+.bmw-world-dropdown-menu li {
+    flex-direction: column;
+
+    width: fit-content;
 }
 
 .search-dropdown-menu-container {
     display: inline-block;
     position: relative;
+
+    cursor: pointer;
 }
 
 .search-dropdown-menu {
+
     display: none;
+
     position: absolute;
-    padding: 1vw;
+
+    padding: 10vw 10vw 10vw 10vw;
+
     background-color: white;
-    box-shadow: 0 12px 12px 12px rgba(0, 0, 0, .25);
+
+    box-shadow: 0 0 12px 0 rgba(0, 0, 0, .25);
+
     z-index: 1;
 
-    left: 10%;
+    margin-top: 2.25vw;
+    margin-left: -65.4vw;
 
-    width: 80%;
+    width: 2255%;
 
+}
+
+.search-dropdown-menu input {
+    font-size: 10vw;
+    font-family: 'Roboto', sans-serif;
+    color: black;
+
+    width: 100%;
+
+    outline: none;
+
+    padding: 0vw 10vw 0 10vw;
+
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    border-bottom-color: rgba(0, 0, 0, .15);
+}
+
+.search-dropdown-menu li {
+    flex-direction: column;
+
+    width: fit-content;
+}
+
+.close-search {
+    position: absolute;
+
+    display: none;
+
+    top: 16.75%;
+    left: 81.15%;
+
+    /* transform: translate(-50%, -50%); */
+
+    z-index: 99999;
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5vw;
+    font-weight: bolder;
     color: black;
 
 }
 
-.search-dropdown-menu-container:hover .search-dropdown-menu {
-    display: block;
+.close {
+    margin: 0 0 0 4.8vw;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5vw;
+    font-weight: bolder;
+    color: black;
 }
 
+.close:hover {
+    color: #007DFF;
+
+    cursor: pointer;
+}
+
+.shadow-container {
+    /* box-shadow: 0px 0px 16px 8px rgba(0, 0, 0, .9); */
+    box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, .9);
+    padding: 1vw 0vw 0 0vw;
+
+    margin: 2vw 0 2vw 0;
+}
+
+.configure-container {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2vw;
+    color: #007DFF;
+    font-weight: bold;
+
+    text-shadow: 20px 2px black;
+
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+
+    transition: all 0.5s ease-out;
+
+    animation: neon2 1.5s ease-in-out infinite alternate;
+}
+
+.configure-container:hover {
+    color: white;
+    -webkit-animation: neon2 1.5s ease-in-out infinite alternate;
+    -moz-animation: neon2 1.5s ease-in-out infinite alternate;
+    animation: neon2 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes neon2 {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #228dff,
+        0 0 50px #228dff, 0 0 80px #228dff, 0 0 100px #228dff, 0 0 150px #228dff;
+    }
+    to {
+      text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #228dff,
+        0 0 35px #228dff, 0 0 40px #228dff, 0 0 50px #228dff, 0 0 125px #228dff;
+    }
+  }
 
 .quick-model-configuration-container {
-    padding: 0 5vw 0 5vw;
+    padding: .5vw 5vw .3vw 5vw;
 
     width: 100%;
     height: auto;
@@ -444,6 +1145,21 @@ img {
     justify-content: center;
 
     overflow-x: hidden;
+
+    background-color: white;
+
+    border-style: solid;
+    border-width: 2px;
+    border-top-color: transparent;
+    /* border-bottom-color: black; */
+
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    border-right-color: transparent;
+
+    /* box-shadow:0px 0px 16px 4px rgba(0, 0, 0, .9); */
+    box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, .9);
+
 }
 
 #div1, #div2, #div3, #div4 {
@@ -467,4 +1183,1142 @@ img {
 #div4 img {
     width: 205px;
     height: 160px;
+}
+
+.configuration-btn-container {
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+    background-color: transparent;
+
+    border-style: solid;
+    border-width: 2px;
+    /* border-top-color: black; */
+    border-bottom-color: transparent;
+
+    border-top-color: transparent;
+    border-left-color: transparent;
+    border-right-color: transparent;
+
+    padding: 1vw 0 1vw 0;
+
+    margin: 1vw 0 0 0;
+
+}
+
+.configuration-btn-container button {
+    border-style: solid;
+    border-width: 2px;
+    border-color: #007DFF;
+}
+
+.configuration-btn-container button:hover {
+    border-color: black;
+    background-color: white;
+    color: black;
+
+    box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, .9);
+}
+
+.card-content-container {
+    width: 100%;
+
+    margin: 2vw 1vw 2vw 1vw;
+
+    background-color: white;
+
+    padding: 4vw 5vw 4vw 5vw;
+
+    display: flex;
+
+    justify-content: space-evenly;
+    justify-content: space-between;
+
+    align-items: center;
+
+}
+
+.card-container {
+    background-color: white;
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 2vw;
+    color: black;
+
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(0, 0, 0, .25);
+    padding: 1vw;
+
+    box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, .9);
+
+    transition: all .5s;
+
+    flex-direction: column;
+
+    width: 20vw;
+
+    height: 33vw;
+
+    align-content:space-between;
+}
+
+.card-container:hover {
+    box-shadow: 0px 0px 8px 2px rgba(0,90,255, 1);
+
+    transition: all .5s;
+}
+
+.card-container img {
+    width: 100%;
+}
+
+.card-title {
+    font-weight: 500;
+
+    width: 80%;
+
+    margin: .5vw 0 .5vw 0;
+}
+
+.card-text {
+    font-weight: lighter;
+
+    font-size: 1.25vw;
+
+    width: 100%;
+
+    margin: 1vw 0 1vw 0;
+}
+
+.card-btn {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.25vw;
+    font-weight: bold;
+    color: black;
+
+    cursor: pointer;
+
+    margin: 1vw 0 0 0;
+}
+
+.card-btn:hover {
+    color: #007DFF;
+}
+
+.lr-title {
+    display: block;
+
+    margin: 1vw 1vw 1vw 1vw;
+
+    padding: 0vw 0vw 0vw 5vw;
+
+    transition: all .5 ease;
+}
+
+.lr-title h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 3vw;
+    font-weight: lighter;
+
+    color: rgba(0, 0, 0, .9);
+}
+
+.lr-container {
+    display: flex;
+
+    justify-content: space-evenly;
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin: 2vw 1vw 2vw 1vw;
+
+    padding: 4vw 5vw 4vw 5vw;
+
+}
+
+.lr-card {
+    display: block;
+
+    width: 30vw;
+    height: 30vw;
+
+    background-color: white;
+
+    justify-content: center;
+}
+
+.lr-card img {
+    width: 100%;
+
+    margin-top: -4vw;
+
+}
+
+.lr-card a {
+    text-decoration: none;
+}
+
+.lr-model-name {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.25vw;
+    font-weight: bold;
+
+    text-align: center;
+}
+
+.info-btn-blk {
+    border: solid 1px black;
+    color: black;
+    background-color: transparent;
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.25vw;
+    font-weight: bold;
+
+    width: 25vw;
+
+    display: block;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    padding: .8vw 0 .8vw 0;
+
+    cursor: pointer;
+
+    transition: all .5s;
+}
+
+.info-btn-blk:hover {
+    box-shadow: 0px 1px 8px 2px rgba(0, 0, 0, .9);
+
+    transition: all .5s;
+}
+
+.lr-specs-list {
+
+    width: 100%;
+
+    display: block;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    padding: 2vw;
+
+    text-align: left;
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2vw;
+    font-weight: lighter;
+    color: black;
+}
+
+.lr-card ul li {
+    list-style-type: none;
+
+    margin: .5vw 0 1vw 0;
+}
+
+.ln-title {
+    display: block;
+
+    width: 100%;
+
+    margin: 2vw 1vw 2vw 1vw;
+
+    padding: 0vw 0vw 0vw 5vw;
+
+}
+
+.ln-title h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 3vw;
+    font-weight: lighter;
+
+    color: rgba(0, 0, 0, .9);
+
+    text-align: left;
+    
+    width: 100%;
+
+    margin-top: 4vw;
+    margin-bottom: 4vw;
+    margin-left: -4vw;      /* bug */
+}
+
+.ln-container {
+    display: flex;
+
+    /* justify-content: space-between; */
+    /* justify-content: space-evenly; */
+
+    align-items: center;
+
+    /* margin: 0vw 0vw 0vw 0vw; */
+    /* padding: 4vw 0vw 4vw 0vw; */
+
+    overflow-x: scroll;
+    overflow-y: hidden;
+
+    width: 100%;
+
+    padding: 2vw 2vw 2vw 2vw;
+}
+
+.ln-container::-webkit-scrollbar {
+    width: 0;
+}
+
+.ln-card {
+    display: block;
+
+    justify-content: center;
+
+    align-content: space-between;
+
+    background-color: white;
+
+    width: 30vw;
+    height: 35vw;
+
+    /* border: solid 2px black; */
+
+    padding: 2vw 2vw 2vw 2vw;
+
+    box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, .9);
+}
+
+.ln-card img {
+    width: 25vw;
+    height: 12vw;
+}
+
+.ln-title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5vw;
+    font-weight: bold;
+    color: black;
+
+    width: 80%;
+
+    display: block;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+
+    padding: 0;
+
+}
+
+.ln-text {
+    width: 80%;
+
+    display: block;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    margin-top: .5vw;
+    margin-bottom: 1vw;
+
+    padding: 0vw;
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2vw;
+}
+
+.ln-btn {
+    margin: 2vw 0 1vw 2vw;
+
+    padding: 0 0 0 .5vw;
+
+    width: 80%;
+
+    text-align: left;
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.25vw;
+    font-weight: bold;
+    color: black;
+
+    transition: all .5s;
+
+    cursor: pointer;
+}
+
+.ln-btn:hover {
+    color: #007DFF;
+    transition: all .5s;
+
+}
+
+.slideshow-container {
+    display: flex;
+
+    justify-content: space-evenly;
+
+    align-items: center;
+
+    box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, .9);
+}
+
+.slideshow-btn {
+    display: block;
+
+    color: black;
+
+    height:40.5vw;
+    width: 10vw;
+
+    cursor: pointer;
+
+    background-color: transparent;
+
+    transition: all .5s ease-out;
+
+    /* border: solid 2px black;
+
+    box-shadow: -12px 0px 8px 4px rgba(0, 0, 0, .9); */
+}
+
+.slideshow-btn:hover {
+    width: 15vw;
+
+    transition: all .5s ease-out;
+}
+
+.menu-options-wrapper {
+
+    display: flex;
+
+    flex-direction: row;
+
+    /* justify-content: space-between; */
+
+    align-items: center;
+
+    width: 100%;
+
+    /* for covering the whole background */
+    /* margin: -2vw; */
+}
+
+.search-and-buy-options {
+    padding: 2vw 0 2vw 2vw;
+}
+
+.search-and-buy-options ul {
+    display: flex;
+
+    flex-direction: column;
+
+    align-content: space-around;
+
+    cursor: pointer;
+
+}
+
+.search-and-buy-options ul li {
+    width: 100%;
+    height: auto;
+
+    border: solid 2px transparent;
+}
+
+.search-and-buy-options ul li button {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.25vw;
+    font-weight: bold;
+    color: rgba(0, 0, 0, .55);
+
+    margin: .5vw 0 .5vw 0;
+
+    cursor: pointer;
+
+    width: 20vw;
+
+    text-align: left;
+}
+
+.search-and-buy-options-show {
+
+    display: block;
+
+    /* display: flex;
+
+    flex-direction: row;
+
+    justify-content: space-evenly; */
+
+    width: 100%;
+    height: 100%;
+
+    background-color: white;
+
+    /* border-left: solid 2px black; */
+}
+
+.sab1 {
+    display: flex;
+
+    flex-direction: row;
+
+    justify-content: space-evenly;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+
+}
+
+.sab1 ul {
+    display: flex;
+
+    flex-direction: column;
+
+    align-content: space-around;
+
+    cursor: pointer;
+
+    /* padding: 2vw 0vw 2vw 8vw;
+    margin: 0 2vw 0 0; */
+}
+
+.sab1 ul li {
+    width: 100%;
+
+    border: solid 2px transparent;
+}
+
+.sab1 ul li button {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.25vw;
+    font-weight: bold;
+    color: black;
+
+    margin: .5vw 0 .5vw 0;
+
+    cursor: pointer;
+
+    width: 20vw;
+
+    text-align: left;
+}
+
+.sab2 {
+    display: none;
+
+    flex-direction: row;
+
+    justify-content: space-evenly;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+}
+
+.sab2 ul {
+    display: flex;
+
+    flex-direction: column;
+
+    align-content: space-around;
+
+    cursor: pointer;
+}
+
+.sab2 ul li {
+    width: 100%;
+
+    border: solid 2px transparent;
+}
+
+.sab2 ul li button {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.25vw;
+    font-weight: bold;
+    color: black;
+
+    margin: .5vw 0 .5vw 0;
+
+    cursor: pointer;
+
+    width: 20vw;
+
+    text-align: left;
+}
+
+.sab3 {
+    display: none;
+
+    flex-direction: row;
+
+    justify-content: space-evenly;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+}
+
+.sab3 ul {
+    display: flex;
+
+    flex-direction: column;
+
+    align-content: space-around;
+
+    cursor: pointer;
+}
+
+.sab3 ul li {
+    width: 100%;
+
+    border: solid 2px transparent;
+}
+
+.sab3 ul li button {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.25vw;
+    font-weight: bold;
+    color: black;
+
+    margin: .5vw 0 .5vw 0;
+
+    cursor: pointer;
+
+    width: 20vw;
+
+    text-align: left;
+}
+
+.sab4 {
+    display: none;
+
+    flex-direction: row;
+
+    justify-content: space-evenly;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+}
+
+.sab4 ul {
+    display: flex;
+
+    flex-direction: column;
+
+    align-content: space-around;
+
+    cursor: pointer;
+}
+
+.sab4 ul li {
+    width: 100%;
+
+    border: solid 2px transparent;
+}
+
+.sab4 ul li button {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.25vw;
+    font-weight: bold;
+    color: black;
+
+    margin: .5vw 0 .5vw 0;
+
+    cursor: pointer;
+
+    width: 20vw;
+
+    text-align: left;
+}
+
+.sab5 {
+    display: none;
+
+    flex-direction: row;
+
+    justify-content: space-evenly;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+}
+
+.sab5 ul {
+    display: flex;
+
+    flex-direction: column;
+
+    align-content: space-around;
+
+    cursor: pointer;
+}
+
+.sab5 ul li {
+    width: 100%;
+
+    border: solid 2px transparent;
+}
+
+.sab5 ul li button {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.25vw;
+    font-weight: bold;
+    color: black;
+
+    margin: .5vw 0 .5vw 0;
+
+    cursor: pointer;
+
+    width: 20vw;
+
+    text-align: left;
+}
+
+.sab6 {
+    display: none;
+
+    flex-direction: row;
+
+    justify-content: space-evenly;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+}
+
+.sab6 ul {
+    display: flex;
+
+    flex-direction: column;
+
+    align-content: space-around;
+
+    cursor: pointer;
+}
+
+.sab6 ul li {
+    width: 100%;
+
+    border: solid 2px transparent;
+}
+
+.sab6 ul li button {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.25vw;
+    font-weight: bold;
+    color: black;
+
+    margin: .5vw 0 .5vw 0;
+
+    cursor: pointer;
+
+    width: 20vw;
+
+    text-align: left;
+}
+
+.sab-img img {
+    width: 25vw;
+    height: 15vw;
+}
+
+.close-btn-container button {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5vw;
+    font-weight: bold;
+    color: black;
+
+    cursor: pointer;
+}
+
+.electric-mobility-options {
+    padding: 2vw 0 2vw 2vw;
+}
+
+.electric-mobility-options ul {
+    display: flex;
+
+    flex-direction: column;
+
+    align-content: space-around;
+
+    cursor: pointer;
+}
+
+.electric-mobility-options ul li {
+    width: 100%;
+    height: auto;
+
+    border: solid 2px transparent;
+}
+
+.electric-mobility-options ul li button {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.25vw;
+    font-weight: bold;
+    color: rgba(0, 0, 0, .55);
+
+    margin: .5vw 0 .5vw 0;
+
+    cursor: pointer;
+
+    width: 20vw;
+
+    text-align: left;
+}
+
+.electric-mobility-options-show {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: white;
+}
+
+.em {
+    display: flex;
+
+    flex-direction: row;
+
+    justify-content: space-evenly;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+}
+
+.em ul {
+    display: flex;
+
+    flex-direction: column;
+
+    align-content: space-around;
+
+    cursor: pointer;
+}
+
+.em ul li {
+    width: 100%;
+
+    border: solid 2px transparent;
+}
+
+.em ul li button {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.25vw;
+    font-weight: bold;
+    color: black;
+
+    margin: .5vw 0 .5vw 0;
+
+    cursor: pointer;
+
+    width: 20vw;
+
+    text-align: left;
+}
+
+.em-img img {
+    width: 25vw;
+    height: auto;
+
+    padding: 5vw 0 5vw 0;
+
+    cursor: pointer;
+}
+
+.em1 {
+    display: flex;
+}
+
+.em2 {
+    display: none;
+}
+
+.em3 {
+    display: none;
+}
+
+.em4 {
+    display: none;
+}
+
+.em5 {
+    display: none;
+}
+
+.em6 {
+    display: none;
+}
+
+.em7 {
+    display: none;
+}
+
+.em8 {
+    display: none;
+}
+
+.social-media {
+    display: flex;
+
+    flex-direction: column;
+
+    padding: 2vw;
+
+    width: 50%;
+
+    justify-content: center;
+
+    margin-left: 70%;
+}
+
+.social-media h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5vw;
+    color: black;
+    font-weight: bold;
+
+    display: block;
+
+    margin-top: 2vw;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.social-media-logos {
+    display: flex;
+
+    flex-direction: row;
+
+    justify-content: space-between;
+
+    padding: 2vw 0 2vw 0;
+
+    width: 25%;
+}
+
+.footer-sep {
+    width: 80%;
+    
+    border: solid 1px black;
+
+    background-color: black;
+    border-radius: 50px;
+
+    display: block;
+
+    margin: 2vw 0 2vw 0;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer-lists {
+    display: flex;
+
+    flex-direction: row;
+
+    justify-content: space-evenly;
+
+    width: 80%;
+
+    /* margin: 0vw 0 vw 0; */
+
+    padding: 2vw 0 2vw 0;
+
+    margin-bottom: 2vw;
+
+    margin-left: 50%;
+    transform: translate(-50%);
+}
+
+.list h3 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5vw;
+    color: black;
+    font-weight: bold;
+
+    margin: 2vw 0 2vw 0;
+}
+
+.list ul {
+    display: flex;
+    
+    flex-direction: column;
+}
+
+.list ul li {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.15vw;
+    font-weight: normal;
+
+    list-style-type: none;
+}
+
+.list ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+.list ul li a:hover {
+    font-weight: bold;
+}
+
+.footer-legal-terms {
+    background-color: white;
+
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: row;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 2vw 10vw 2vw 10vw;
+
+    box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, .9);
+}
+
+.copy-right {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.25vw;
+    color: black;
+    font-weight: lighter;
+
+    width: 200%;
+}
+
+.footer-stuff-container {
+    display: flex;
+
+    flex-direction: row;
+
+    justify-content: right;
+
+    align-items: center;
+
+    width: 90%;
+
+    margin-left: 2vw;
+}
+
+.footer-stuff {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.25vw;
+    color: #007DFF;
+    font-weight: bold;
+
+    margin-left: 2vw;
+}
+
+footer {
+    background-color: rgba(0, 0, 0, .15);
+}
+
+/* animation start */
+
+@keyframes navAppear {
+
+    0% {margin-top: -10%;}
+    100% {margin-top: 0%;}
+
+}
+
+@keyframes menuAppear {
+
+    0% {margin-top: -20%;}
+    100% {margin-top: 0%;}
+
+}
+
+@keyframes navBorderAppear {
+
+    0% {border-bottom-color: transparent;}
+    100% {border-bottom-color: black;}
+
+}
+
+/* animation end */
+
+@media (max-width: 800px) {
+
+    .car-details-container {
+        width: 20vh;
+        height: auto;
+
+        display: contents;
+    }
+
+    .car-name {
+        font-size: 3vh;
+    }
+
+    .car-info {
+        font-size: 2vh;
+    }
+
+    #car-info-price {
+        font-size: 3vh;
+    }
+
+    .new-tag {
+        font-size: 3vh;
+    }
+
+}
+
+@media (min-width: 801px) and (max-width: 1439px) {
+
+    .option-X-content {
+        display: block;
+
+        margin-left: auto;
+        margin-right: auto;
+
+        justify-content: space-between;
+    }
+
+    .car-details-container {
+        width: 36vw;
+        height: auto;
+
+        display: block;
+
+        flex-direction: column;
+    }
+
+    .car-name {
+        font-size: 3vw;
+    }
+
+    .car-info {
+        font-size: 2vw;
+    }
+
+    #car-info-price {
+        font-size: 3vw;
+    }
+
+    .new-tag {
+        font-size: 2.5vw;
+    }
+
 }

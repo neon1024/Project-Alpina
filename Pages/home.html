@@ -8,6 +8,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+
+    <link rel="stylesheet" type="text/css" href="../Styles/style.css">
+
+    <script src="../Scripts/dropdown_menu_activation.js"></script>
+    <script src="../Scripts/option_activation.js"></script>
+    <script src="../Scripts/displayError.js"></script>
+    <script src="../Scripts/close_menu.js"></script>
+    <script src="../Scripts/close_search.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <link rel="icon" type="image/png" href="/Images/bmw_favicon_1.png">
+
     <meta name="description" content="Enter now and discover our exclusive models. Official BMW Website When You Drive, Drive. You like driving. BMW dealers. BMW promotions. Models: Sports, Luxury, Family, Plug-in Hybrids, Electric.">
 
     <link rel="stylesheet" type="text/css" href="/Styles/style.css">
@@ -29,125 +42,1604 @@
 
         <div class="background-image-header">
 
-            <nav>
+            <nav id="nav">
 
                 <div class="menu">
 
                     <ul>
 
-                        <span onclick="displayError()" class="models-dropdown-menu-container">
+                        <span class="models-dropdown-menu-container">
 
-                            <a href="models.html">
+                            <li>
 
-                                <li>
-
-                                        <span class="nav-title">Models</span>
-
-                                    <div class="models-dropdown-menu">
-
-                                        <ul>
-                                            <li><a href="">text</a></li>
-                                            <li><a href="">text</a></li>
-                                            <li><a href="">text</a></li>
-                                            <li><a href="">text</a></li>
-                                            <li><a href="">text</a></li>
-                                        </ul>
-
-                                    </div>
-
-                                </li>
-
-                            </a>
-
-                        </span>
-
-                        <span onclick="displayError()" class="search-and-buy-dropdown-menu-container">
-
-                            <a href="">
-
-                                <li>
-
-                                    <span class="nav-title">Search & buy</span>
-
-                                    <div class="search-and-buy-dropdown-menu">
-
-                                        <ul>
-                                            <li><a href="">text</a></li>
-                                            <li><a href="">text</a></li>
-                                            <li><a href="">text</a></li>
-                                            <li><a href="">text</a></li>
-                                            <li><a href="">text</a></li>
-                                        </ul>
-
-                                    </div>
-
-                                </li>
-                            
-                            </a>
-
-                        </span>
-
-                        <span onclick="displayError()" class="electric-mobility-dropdown-menu-container">
-                            
-                            <a href="">
-                                
-                                <li>
-                                    
-                                    <span class="nav-title">Electric Mobility</span>
-
-                                    <div class="electric-mobility-dropdown-menu">
+                                    <button type="button" onclick="activateDropdownMenu('models')">
                                         
-                                        <ul>
-                                            <li><a href=""></a></li>
-                                            <li><a href=""></a></li>
-                                            <li><a href=""></a></li>
-                                            <li><a href=""></a></li>
-                                            <li><a href=""></a></li>
+                                        <span id="nav-title-models" class="nav-title">
+                                            
+                                            Models
+                                        
+                                        </span>
+                                    
+                                    </button>
+
+                                    <div id="models-dropdown-menu" class="models-dropdown-menu">
+
+                                         <ul>
+
+                                            <li>
+
+                                                    <div class="all-the-models-container">
+
+                                                        <ul>
+                                                            <li> <button type="button" onclick="activateOption('All-the-models')">All the models</button> </li>
+                                                            <li> <button type="button" onclick="activateOption('1')">1</button> </li>
+                                                            <li> <button type="button" onclick="activateOption('2')">2</button> </li>
+                                                            <li> <button type="button" onclick="activateOption('3')">3</button> </li>
+                                                            <li> <button type="button" onclick="activateOption('4')">4</button> </li>
+                                                            <li> <button type="button" onclick="activateOption('5')">5</button> </li>
+                                                            <li> <button type="button" onclick="activateOption('6')">6</button> </li>
+                                                            <li> <button type="button" onclick="activateOption('7')">7</button> </li>
+                                                            <li> <button type="button" onclick="activateOption('8')">8</button> </li>
+                                                            <li> <button type="button" onclick="activateOption('X')">X</button> </li>
+                                                            <li> <button type="button" onclick="activateOption('Z')">Z</button> </li>
+                                                            <li> <button type="button" onclick="activateOption('M')">M</button> </li>
+                                                            <li> <button type="button" onclick="activateOption('i')">i</button> </li>
+                                                            <li> <button type="button" onclick="activateOption('Plug-in-Hybrids')">Plug-in Hybrids</button> </li>
+                                                            <li> <button type="button" onclick="activateOption('Concept-Cars')">Concept Cars</button> </li>
+                                                            <li> <button class="close-btn" type="button" onclick="closeMenu()"> <span class="close">X</span> </button> </li>
+                                                        </ul>
+
+                                                    </div>
+
+                                            </li>
+
+                                            <div id="option-All-the-models" class="option-All-the-models-content">
+
+                                                    <div class="All-the-Models-title">All the models</div>
+
+                                                    <img id="piece1" src="../Images/piece_1.jpg" alt="">
+
+                                                    <img id="piece2" src="../Images/piece_2.jpg" alt="">
+
+                                                    <img id="piece3" src="../Images/piece_3.jpg" alt="">
+
+                                                    <img id="piece4" src="../Images/piece_4.jpg" alt="">
+
+                                                <div class="center">
+                                                    
+                                                    <a class="discover-btn" href="https://www.bmw.es/es/coches-bmw.html">
+
+                                                    <button class="blue-info-btn">
+                                                        
+                                                        Discover
+                                                    
+                                                    </button>
+
+                                                    </a>
+                                                
+                                                </div>
+
+                                            </div>
+
+                                            <div id="option-1" class="option-1-content">
+
+                                                <li>
+
+                                                    <a href="">
+
+                                                        <div class="car-details-container">
+
+                                                            <div class="dummy-tag">Fill</div>
+
+                                                            <img src="../Images/bmw_1_1.jpg" title="BMW 1 Series">
+
+                                                            <div class="dummy-logo"><img src="../Images/bmw_m_logo.jpg"></div>
+
+                                                            <div class="car-name">
+                                                                BMW 1 Series
+                                                            </div>
+
+                                                            <div class="car-info">
+                                                                <p id="car-info-p1">GASOLINE</p>
+                                                                <p id="car-info-p2">DIESEL</p>
+                                                                <!-- <p id="car-info-p3">PLUG-IN HYBRID</p> -->
+                                                            </div>
+
+                                                            <p id="car-info-price">From € 31,000</p>
+
+                                                        </div>
+
+                                                    </a>
+                                                </li>
+                        <script src="../Scripts/displayError.js"></script>
+
+                                                <li>
+
+                                                    <a href="">
+
+                                                        <div class="car-details-container">
+
+                                                            <div class="dummy-tag">Fill</div>
+
+                                                            <img src="../Images/bmw_1_2.jpg" title="BMW M135i xDrive">
+
+                                                            <div class="type-logo"><img src="../Images/bmw_m_logo.jpg"></div>
+
+                                                            <div class="car-name">
+                                                                BMW M135i xDrive
+                                                            </div>
+
+                                                            <div class="car-info">
+                                                                <p id="car-info-p1">GASOLINE</p>
+                                                                <!-- <p id="car-info-p2">DIESEL</p> -->
+                                                                <!-- <p id="car-info-p3">PLUG-IN HYBRID</p> -->
+                                                            </div>
+
+                                                            <p id="car-info-price">From € 31,000</p>
+
+                                                        </div>
+
+                                                    </a>
+
+                                                </li>
+
+                                            </div>
+
+                                            <div id="option-2" class="option-2-content">
+
+                                                <li>
+                                                    <a href="">
+                                                        <div class="car-details-container">
+
+                                                            <div class="new-tag">New</div>
+
+                                                            <img src="../Images/bmw_2_1.jpg" title="BMW 2 Series">
+
+                                                            <div class="dummy-logo"><img src="../Images/bmw_m_logo.jpg"></div>
+
+                                                            <div class="car-name">
+                                                                New BMW 2 Series
+                                                            </div>
+
+                                                            <div class="car-info">
+                                                                <p id="car-info-p1">GASOLINE</p>
+                                                                <p id="car-info-p2">DIESEL</p>
+                                                                <!-- <p id="car-info-p3">PLUG-IN HYBRID</p> -->
+                                                            </div>
+
+                                                            <p id="car-info-price">From € 40,600</p>
+
+                                                        </div>
+                                                    </a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="">
+                                                        <div class="car-details-container">
+
+                                                            <div class="dummy-tag">Fill</div>
+
+                                                            <img src="../Images/bmw_2_2.jpg" title="BMW 2 Series Gran Coupe">
+
+                                                            <div class="dummy-logo"><img src="../Images/bmw_m_logo.jpg"></div>
+
+                                                            <div class="car-name">
+                                                                BMW 2 Series Gran Coupe
+                                                            </div>
+
+                                                            <div class="car-info">
+                                                                <p id="car-info-p1">GASOLINE</p>
+                                                                <p id="car-info-p2">DIESEL</p>
+                                                                <!-- <p id="car-info-p3">PLUG-IN HYBRID</p> -->
+                                                            </div>
+
+                                                            <p id="car-info-price">From € 32,800</p>
+
+                                                        </div>
+                                                    </a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="">
+                                                        <div class="car-details-container">
+
+                                                            <div class="dummy-tag">Fill</div>
+
+                                                            <img src="../Images/bmw_2_3.jpg" title="BMW 2 Series Cabrio">
+
+                                                            <div class="dummy-logo"><img src="../Images/bmw_m_logo.jpg"></div>
+
+                                                            <div class="car-name">
+                                                                BMW 2 Series Cabrio
+                                                            </div>
+
+                                                            <div class="car-info">
+                                                                <p id="car-info-p1">GASOLINE</p>
+                                                                <p id="car-info-p2">DIESEL</p>
+                                                                <!-- <p id="car-info-p3">PLUG-IN HYBRID</p> -->
+                                                            </div>
+
+                                                            <p id="car-info-price">From € 40,000</p>
+
+                                                        </div>
+                                                    </a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="">
+                                                        <div class="car-details-container">
+
+                                                            <div class="dummy-tag">Fill</div>
+
+                                                            <img src="../Images/bmw_2_4.jpg" title="BMW 2 Series Active Tourer">
+
+                                                            <div class="dummy-logo"><img src="../Images/bmw_m_logo.jpg"></div>
+
+                                                            <div class="car-name">
+                                                                BMW 2 Series Active Tourer
+                                                            </div>
+
+                                                            <div class="car-info">
+                                                                <p id="car-info-p1">GASOLINE</p>
+                                                                <p id="car-info-p2">DIESEL</p>
+                                                                <p id="car-info-p3">PLUG-IN HYBRID</p>
+                                                            </div>
+
+                                                            <p id="car-info-price">From € 28,400</p>
+
+                                                        </div>
+
+                                                    </a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="">
+                                                        <div class="car-details-container">
+
+                                                            <div class="dummy-tag">Fill</div>
+
+                                                            <img src="../Images/bmw_2_5.jpg" title="BMW 2 Series Gran Tourer">
+
+                                                            <div class="dummy-logo"><img src="../Images/bmw_m_logo.jpg"></div>
+
+                                                            <div class="car-name">
+                                                                BMW 2 Series Gran Tourer
+                                                            </div>
+
+                                                            <div class="car-info">
+                                                                <p id="car-info-p1">GASOLINE</p>
+                                                                <p id="car-info-p2">DIESEL</p>
+                                                                <!-- <p id="car-info-p3">PLUG-IN HYBRID</p> -->
+                                                            </div>
+
+                                                            <p id="car-info-price">From € 29,800</p>
+
+                                                        </div>
+                                                    </a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="">
+                                                        <div class="car-details-container">
+
+                                                            <div class="dummy-tag">Fill</div>
+
+                                                            <img src="../Images/bmw_m2_1.jpg" title="BMW M2 Competition">
+
+                                                            <div class="type-logo"><img src="../Images/bmw_m_logo.jpg"></div>
+
+                                                            <div class="car-name">
+                                                                BMW M2 Competition
+                                                            </div>
+
+                                                            <div class="car-info">
+                                                                <p id="car-info-p1">GASOLINE</p>
+                                                                <p id="car-info-p2">DIESEL</p>
+                                                                <!-- <p id="car-info-p3">PLUG-IN HYBRID</p> -->
+                                                            </div>
+
+                                                            <p id="car-info-price">From € 75,650</p>
+
+                                                        </div>
+                                                    </a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="">
+                                                        <div class="car-details-container">
+
+                                                            <div class="dummy-tag">Fill</div>
+
+                                                            <img src="../Images/bmw_m2_2.jpg" title="BMW M2 CS">
+
+                                                            <div class="type-logo"><img src="../Images/bmw_m_logo.jpg"></div>
+
+                                                            <div class="car-name">
+                                                                BMW M2 CS
+                                                            </div>
+
+                                                            <div class="car-info">
+                                                                <p id="car-info-p1">GASOLINE</p>
+                                                                <p id="car-info-p2">DIESEL</p>
+                                                                <!-- <p id="car-info-p3">PLUG-IN HYBRID</p> -->
+                                                            </div>
+
+                                                            <p id="car-info-price">From € 100,100</p>
+
+                                                        </div>
+                                                    </a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="">
+                                                        <div class="car-details-container">
+
+                                                            <div class="new-tag">New</div>
+
+                                                            <img src="../Images/bmw_m240i.jpg" title="BMW M240i xDrive Coupe">
+
+                                                            <div class="type-logo"><img src="../Images/bmw_m_logo.jpg"></div>
+
+                                                            <div class="car-name">
+                                                                New BMW M240i xDrive Coupe
+                                                            </div>
+
+                                                            <div class="car-info">
+                                                                <p id="car-info-p1">GASOLINE</p>
+                                                                <p id="car-info-p2">DIESEL</p>
+                                                                <!-- <p id="car-info-p3">PLUG-IN HYBRID</p> -->
+                                                            </div>
+
+                                                            <p id="car-info-price">From € 67,350</p>
+
+                                                        </div>
+                                                    </a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="">
+                                                        <div class="car-details-container">
+
+                                                            <div class="dummy-tag">Fill</div>
+
+                                                            <img src="../Images/bmw_m235i.jpg" title="BMW M235i Gran Coupe">
+
+                                                            <div class="type-logo"><img src="../Images/bmw_m_logo.jpg"></div>
+
+                                                            <div class="car-name">
+                                                                BMW M235i Gran Coupe
+                                                            </div>
+
+                                                            <div class="car-info">
+                                                                <p id="car-info-p1">GASOLINE</p>
+                                                                <p id="car-info-p2">DIESEL</p>
+                                                                <!-- <p id="car-info-p3">PLUG-IN HYBRID</p> -->
+                                                            </div>
+
+                                                            <p id="car-info-price">From € 60,100</p>
+
+                                                        </div>
+                                                    </a>
+                                                </li>
+
+                                            </div>
+
+                                            <div id="option-3" class="option-3-content">
+
+                                                <li>
+                                                    <a href="">
+                                                        <div class="car-details-container">
+
+                                                            <div class="dummy-tag">Fill</div>
+
+                                                            <img src="../Images/bmw_3_1.jpg" title="BMW 3 Series Sedan">
+
+                                                            <div class="dummy-logo"><img src="../Images/bmw_m_logo.jpg"></div>
+
+                                                            <div class="car-name">
+                                                                BMW 3 Series Sedan
+                                                            </div>
+
+                                                            <div class="car-info">
+                                                                <p id="car-info-p1">GASOLINE</p>
+                                                                <p id="car-info-p2">DIESEL</p>
+                                                                <p id="car-info-p3">PLUG-IN HYBRID</p>
+                                                            </div>
+
+                                                            <p id="car-info-price">From € 44,800</p>
+
+                                                        </div>
+                                                    </a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="">
+                                                        <div class="car-details-container">
+
+                                                            <div class="dummy-tag">Fill</div>
+
+                                                            <img src="../Images/bmw_3_2.jpg" title="BMW 3 Series Touring">
+
+                                                            <div class="dummy-logo"><img src="../Images/bmw_m_logo.jpg"></div>
+
+                                                            <div class="car-name">
+                                                                BMW 3 Series Touring
+                                                            </div>
+
+                                                            <div class="car-info">
+                                                                <p id="car-info-p1">GASOLINE</p>
+                                                                <p id="car-info-p2">DIESEL</p>
+                                                                <p id="car-info-p3">PLUG-IN HYBRID</p>
+                                                            </div>
+
+                                                            <p id="car-info-price">From € 45,900</p>
+
+                                                        </div>
+                                                    </a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="">
+                                                        <div class="car-details-container">
+
+                                                            <div class="new-tag">New</div>
+
+                                                            <img src="../Images/bmw_3_3.jpg" title="BMW 3 Series Berlin">
+
+                                                            <div class="dummy-logo"><img src="../Images/bmw_m_logo.jpg"></div>
+
+                                                            <div class="car-name">
+                                                                New BMW 3 Series Berlin
+                                                            </div>
+
+                                                            <div class="car-info">
+                                                                <p id="car-info-p1">GASOLINE</p>
+                                                                <p id="car-info-p2">DIESEL</p>
+                                                                <!-- <p id="car-info-p3">PLUG-IN HYBRID</p> -->
+                                                            </div>
+
+                                                            <p id="car-info-price">From € 107,100</p>
+
+                                                        </div>
+                                                    </a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="">
+                                                        <div class="car-details-container">
+
+                                                            <div class="dummy-tag">Fill</div>
+
+                                                            <img src="../Images/bmw_3_4.jpg" title="BMW M340i xDrive Touring">
+
+                                                            <div class="type-logo"><img src="../Images/bmw_m_logo.jpg"></div>
+
+                                                            <div class="car-name">
+                                                                BMW M340i xDrive Touring
+                                                            </div>
+
+                                                            <div class="car-info">
+                                                                <p id="car-info-p1">GASOLINE</p>
+                                                                <p id="car-info-p2">DIESEL</p>
+                                                                <!-- <p id="car-info-p3">PLUG-IN HYBRID</p> -->
+                                                            </div>
+
+                                                            <p id="car-info-price">From € 74,900</p>
+
+                                                        </div>
+                                                    </a>
+                                                </li>
+
+                                            </div>
+
+                                            <div id="option-4" class="option-4-content">
+
+                                                <li>
+                                                    <a href="">
+                                                        <div class="car-details-container">
+
+                                                            <div class="new-tag">New</div>
+
+                                                            <img src="../Images/bmw_4_1.jpg" title="BMW 4 Series Coupe">
+
+                                                            <div class="dummy-logo"><img src="../Images/bmw_m_logo.jpg"></div>
+
+                                                            <div class="car-name">
+                                                                New BMW 4 Series Coupe
+                                                            </div>
+
+                                                            <div class="car-info">
+                                                                <p id="car-info-p1">GASOLINE</p>
+                                                                <p id="car-info-p2">DIESEL</p>
+                                                                <!-- <p id="car-info-p3">PLUG-IN HYBRID</p> -->
+                                                            </div>
+
+                                                            <p id="car-info-price">From € 47,900</p>
+
+                                                        </div>
+                                                    </a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="">
+                                                        <div class="car-details-container">
+
+                                                            <div class="new-tag">New</div>
+
+                                                            <img src="../Images/bmw_4_2.jpg" title="BMW 4 Series Gran Coupe">
+
+                                                            <div class="dummy-logo"><img src="../Images/bmw_m_logo.jpg"></div>
+
+                                                            <div class="car-name">
+                                                                New BMW 4 Series Gran Coupe
+                                                            </div>
+
+                                                            <div class="car-info">
+                                                                <p id="car-info-p1">GASOLINE</p>
+                                                                <p id="car-info-p2">DIESEL</p>
+                                                                <!-- <p id="car-info-p3">PLUG-IN HYBRID</p> -->
+                                                            </div>
+
+                                                            <p id="car-info-price">From € 49,500</p>
+
+                                                        </div>
+                                                    </a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="">
+                                                        <div class="car-details-container">
+
+                                                            <div class="new-tag">New</div>
+
+                                                            <img src="../Images/bmw_4_3.jpg" title="BMW 4 Series Cabrio">
+
+                                                            <div class="dummy-logo"><img src="../Images/bmw_m_logo.jpg"></div>
+
+                                                            <div class="car-name">
+                                                                New BMW 4 Series Cabrio
+                                                            </div>
+
+                                                            <div class="car-info">
+                                                                <p id="car-info-p1">GASOLINE</p>
+                                                                <p id="car-info-p2">DIESEL</p>
+                                                                <!-- <p id="car-info-p3">PLUG-IN HYBRID</p> -->
+                                                            </div>
+
+                                                            <p id="car-info-price">From € 56,000</p>
+
+                                                        </div>
+                                                    </a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="">
+                                                        <div class="car-details-container">
+
+                                                            <div class="new-tag">New</div>
+
+                                                            <img src="../Images/bmw_m4_1.jpg" title="BMW M4 Coupe">
+
+                                                            <div class="type-logo"><img src="../Images/bmw_m_logo.jpg"></div>
+
+                                                            <div class="car-name">
+                                                                New BMW M4 Coupe
+                                                            </div>
+
+                                                            <div class="car-info">
+                                                                <p id="car-info-p1">GASOLINE</p>
+                                                                <!-- <p id="car-info-p2">DIESEL</p> -->
+                                                                <!-- <p id="car-info-p3">PLUG-IN HYBRID</p> -->
+                                                            </div>
+
+                                                            <p id="car-info-price">From € 109,000</p>
+
+                                                        </div>
+                                                    </a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="">
+                                                        <div class="car-details-container">
+
+                                                            <div class="new-tag">New</div>
+
+                                                            <img src="../Images/bmw_m4_3.jpg" title="BMW M4 Cabrio">
+
+                                                            <div class="type-logo"><img src="../Images/bmw_m_logo.jpg"></div>
+
+                                                            <div class="car-name">
+                                                                New BMW M4 Cabrio
+                                                            </div>
+
+                                                            <div class="car-info">
+                                                                <p id="car-info-p1">GASOLINE</p>
+                                                                <!-- <p id="car-info-p2">DIESEL</p> -->
+                                                                <!-- <p id="car-info-p3">PLUG-IN HYBRID</p> -->
+                                                            </div>
+
+                                                            <p id="car-info-price">From € 118.700</p>
+
+                                                        </div>
+                                                    </a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="">
+                                                        <div class="car-details-container">
+
+                                                            <div class="new-tag">New</div>
+
+                                                            <img src="../Images/bmw_i4_1.jpg" title="BMW i4">
+
+                                                            <div class="type-logo"><img src="../Images/bmw_i_logo.jpg"></div>
+
+                                                            <div class="car-name">
+                                                                New BMW i4
+                                                            </div>
+
+                                                            <div class="car-info">
+                                                                <!-- <p id="car-info-p1">GASOLINE</p> -->
+                                                                <!-- <p id="car-info-p2">DIESEL</p> -->
+                                                                <!-- <p id="car-info-p3">Plug-in-Hybrid</p> -->
+                                                                <p id="car-info-p1" style="color: #007DFF;">Electric</p>
+                                                            </div>
+
+                                                            <p id="car-info-price">From € 59.900</p>
+
+                                                        </div>
+                                                    </a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="">
+                                                        <div class="car-details-container">
+
+                                                            <div class="new-tag">New</div>
+
+                                                            <img src="../Images/bmw_i4_2.jpg" title="BMW i4 M50">
+
+                                                            <div class="type-logo"><img src="../Images/bmw_i_logo.jpg"></div>
+
+                                                            <div class="car-name">
+                                                                New BMW i4 M50
+                                                            </div>
+
+                                                            <div class="car-info">
+                                                                <!-- <p id="car-info-p1">GASOLINE</p> -->
+                                                                <!-- <p id="car-info-p2">DIESEL</p> -->
+                                                                <!-- <p id="car-info-p3">Plug-in-Hybrid</p> -->
+                                                                <p id="car-info-p1" style="color: #007DFF;">Electric</p>
+                                                            </div>
+
+                                                            <p id="car-info-price">From € 74.500</p>
+
+                                                        </div>
+                                                    </a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="">
+                                                        <div class="car-details-container">
+
+                                                            <div class="new-tag">New</div>
+
+                                                            <img src="../Images/bmw_m4_2.jpg" title="BMW M440i xDrive Gran Coupe">
+
+                                                            <div class="type-logo"><img src="../Images/bmw_m_logo.jpg"></div>
+
+                                                            <div class="car-name">
+                                                                New BMW M440i xDrive Gran Coupe
+                                                            </div>
+
+                                                            <div class="car-info">
+                                                                <p id="car-info-p1">GASOLINE</p>
+                                                                <!-- <p id="car-info-p2">DIESEL</p> -->
+                                                                <!-- <p id="car-info-p3">PLUG-IN HYBRID</p> -->
+                                                            </div>
+
+                                                            <p id="car-info-price">From € 74,300</p>
+
+                                                        </div>
+                                                    </a>
+                                                </li>
+
+                                            </div>
+
+                                            <div id="option-X" class="option-X-content">
+
+                                                <li>
+                                                    <a href="">
+                                                        <div class="car-details-container">
+
+                                                            <div class="dummy-tag">Fill</div>
+
+                                                            <img src="../Images/bmw_x1.jpg" title="BMW X1">
+
+                                                            <div class="dummy-logo"><img src="../Images/bmw_m_logo.jpg"></div>
+
+                                                            <div class="car-name">
+                                                                BMW X1
+                                                            </div>
+
+                                                            <div class="car-info">
+                                                                <p id="car-info-p1">GASOLINE</p>
+                                                                <p id="car-info-p2">DIESEL</p>
+                                                                <p id="car-info-p3">PLUG-IN HYBRID</p>
+                                                            </div>
+
+                                                            <p id="car-info-price">From € 33,000</p>
+
+                                                        </div>
+                                                    </a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="">
+                                                        <div class="car-details-container">
+
+                                                            <div class="dummy-tag">Fill</div>
+
+                                                            <img src="../Images/bmw_x2.jpg" title="BMW X2">
+
+                                                            <div class="dummy-logo"><img src="../Images/bmw_m_logo.jpg"></div>
+
+                                                            <div class="car-name">
+                                                                BMW X2
+                                                            </div>
+
+                                                            <div class="car-info">
+                                                                <p id="car-info-p1">GASOLINE</p>
+                                                                <p id="car-info-p2">DIESEL</p>
+                                                                <p id="car-info-p3">PLUG-IN HYBRID</p>
+                                                            </div>
+
+                                                            <p id="car-info-price">From € 33,800</p>
+
+                                                        </div>
+                                                    </a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="">
+                                                        <div class="car-details-container">
+
+                                                            <div class="new-tag">New</div>
+
+                                                            <img src="../Images/bmw_x3.jpg" title="BMW X3">
+
+                                                            <div class="dummy-logo"><img src="../Images/bmw_m_logo.jpg"></div>
+
+                                                            <div class="car-name">
+                                                                New BMW X3
+                                                            </div>
+
+                                                            <div class="car-info">
+                                                                <p id="car-info-p1">GASOLINE</p>
+                                                                <p id="car-info-p2">DIESEL</p>
+                                                                <p id="car-info-p3">PLUG-IN HYBRID</p>
+                                                            </div>
+
+                                                            <p id="car-info-price">From € 51,100</p>
+
+                                                        </div>
+                                                    </a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="">
+                                                        <div class="car-details-container">
+
+                                                            <div class="new-tag">New</div>
+
+                                                            <img src="../Images/bmw_iX.jpg" title="BMW iX">
+
+                                                            <div class="type-logo"><img src="../Images/bmw_i_logo.jpg"></div>
+
+                                                            <div class="car-name">
+                                                                New BMW iX
+                                                            </div>
+
+                                                            <div class="car-info">
+                                                                <p id="car-info-p1" style="color: #007DFF;">Electric</p>
+                                                            </div>
+
+                                                            <p id="car-info-price">From € 85,850</p>
+
+                                                        </div>
+
+                                                    </a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="">
+                                                        <div class="car-details-container">
+
+                                                            <div class="new-tag">New</div>
+
+                                                            <img src="../Images/bmw_iX3.jpg" title="BMW iX3">
+
+                                                            <div class="type-logo"><img src="../Images/bmw_i_logo.jpg"></div>
+
+                                                            <div class="car-name">
+                                                                New BMW iX3
+                                                            </div>
+
+                                                            <div class="car-info">
+                                                                <p id="car-info-p1" style="color: #007DFF;">Electric</p>
+                                                            </div>
+
+                                                            <p id="car-info-price">From € 73,300</p>
+
+                                                        </div>
+                                                    </a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="">
+                                                        <div class="car-details-container">
+
+                                                            <div class="new-tag">New</div>
+
+                                                            <img src="../Images/bmw_x4.jpg" title="BMW X4">
+
+                                                            <div class="dummy-logo"><img src="../Images/bmw_m_logo.jpg"></div>
+
+                                                            <div class="car-name">
+                                                                New BMW X4
+                                                            </div>
+
+                                                            <div class="car-info">
+                                                                <p id="car-info-p1">GASOLINE</p>
+                                                                <p id="car-info-p2">DIESEL</p>
+                                                                <!-- <p id="car-info-p3">PLUG-IN HYBRID</p> -->
+                                                            </div>
+
+                                                            <p id="car-info-price">From € 56.000</p>
+
+                                                        </div>
+                                                    </a>
+                                                </li>
+
+                                            </div>
+
+                                            <div id="option-Z" class="option-Z-content">
+
+                                                <li>
+
+                                                    <a href="">
+
+                                                        <div class="car-details-container">
+
+                                                            <div class="dummy-tag">Fill</div>
+
+                                                            <img src="../Images/bmw_z4_1.jpg" title="BMW Z4">
+
+                                                            <div class="dummy-logo"><img src="../Images/bmw_m_logo.jpg"></div>
+
+                                                            <div class="car-name">
+                                                                BMW Z4
+                                                            </div>
+
+                                                            <div class="car-info">
+                                                                <p id="car-info-p1">GASOLINE</p>
+                                                                <p id="car-info-p2">DIESEL</p>
+                                                                <!-- <p id="car-info-p3">PLUG-IN HYBRID</p> -->
+                                                            </div>
+
+                                                            <p id="car-info-price">From 49.300€</p>
+
+                                                        </div>
+
+                                                    </a>
+
+                                                </li>
+
+                                                <li>
+
+                                                    <a href="">
+
+                                                        <div class="car-details-container">
+
+                                                            <div class="dummy-tag">Fill</div>
+
+                                                            <img src="../Images/bmw_z4_2.jpg" title="BMW Z4 M40i">
+
+                                                            <div class="dummy-logo"><img src="../Images/bmw_m_logo.jpg"></div>
+
+                                                            <div class="car-name">
+                                                                BMW Z4 M40i
+                                                            </div>
+
+                                                            <div class="car-info">
+                                                                <p id="car-info-p1">GASOLINE</p>
+                                                                <p id="car-info-p2">DIESEL</p>
+                                                                <!-- <p id="car-info-p3">PLUG-IN HYBRID</p> -->
+                                                            </div>
+
+                                                            <p id="car-info-price">From 71.450€</p>
+
+                                                        </div>
+
+                                                    </a>
+
+                                                </li>
+
+                                            </div>
+
+                                            <div id="option-M" class="option-M-content">
+
+                                                <li>
+
+                                                    <a href="">
+
+                                                        <div class="car-details-container">
+
+                                                            <div class="dummy-tag">Fill</div>
+
+                                                            <img src="../Images/bmw_1_2.jpg" title="BMW M135i xDrive">
+
+                                                            <div class="type-logo"><img src="../Images/bmw_m_logo.jpg"></div>
+
+                                                            <div class="car-name">
+                                                                BMW M135i xDrive
+                                                            </div>
+
+                                                            <div class="car-info">
+                                                                <p id="car-info-p1">GASOLINE</p>
+                                                                <!-- <p id="car-info-p2">DIESEL</p> -->
+                                                                <!-- <p id="car-info-p3">PLUG-IN HYBRID</p> -->
+                                                            </div>
+
+                                                            <p id="car-info-price">From € 31,000</p>
+
+                                                        </div>
+
+                                                    </a>
+
+                                                </li>
+
+                                                <li>
+
+                                                    <a href="">
+
+                                                        <div class="car-details-container">
+
+                                                            <div class="dummy-tag">Fill</div>
+
+                                                            <img src="../Images/bmw_m2_1.jpg" title="BMW M2 Competition">
+
+                                                            <div class="type-logo"><img src="../Images/bmw_m_logo.jpg"></div>
+
+                                                            <div class="car-name">
+                                                                BMW M2 Competition
+                                                            </div>
+
+                                                            <div class="car-info">
+                                                                <p id="car-info-p1">GASOLINE</p>
+                                                                <!-- <p id="car-info-p2">DIESEL</p> -->
+                                                                <!-- <p id="car-info-p3">PLUG-IN HYBRID</p> -->
+                                                            </div>
+
+                                                            <p id="car-info-price">From € 72.900€</p>
+
+                                                        </div>
+
+                                                    </a>
+
+                                                </li>
+
+                                                <li>
+
+                                                    <a href="">
+
+                                                        <div class="car-details-container">
+
+                                                            <div class="dummy-tag">Fill</div>
+
+                                                            <img src="../Images/bmw_m2_2.jpg" title="BMW M2 CS">
+
+                                                            <div class="type-logo"><img src="../Images/bmw_m_logo.jpg"></div>
+
+                                                            <div class="car-name">
+                                                                BMW M2 CS
+                                                            </div>
+
+                                                            <div class="car-info">
+                                                                <p id="car-info-p1">GASOLINE</p>
+                                                                <!-- <p id="car-info-p2">DIESEL</p> -->
+                                                                <!-- <p id="car-info-p3">PLUG-IN HYBRID</p> -->
+                                                            </div>
+
+                                                            <p id="car-info-price">From 100.100€</p>
+
+                                                        </div>
+
+                                                    </a>
+
+                                                </li>
+
+                                                <li>
+
+                                                    <a href="">
+
+                                                        <div class="car-details-container">
+
+                                                            <div class="dummy-tag">Fill</div>
+
+                                                            <img src="../Images/bmw_m2_3.jpg" title="BMW M235i Gran Coupe">
+
+                                                            <div class="type-logo"><img src="../Images/bmw_m_logo.jpg"></div>
+
+                                                            <div class="car-name">
+                                                                BMW M2351 Gran Coupe
+                                                            </div>
+
+                                                            <div class="car-info">
+                                                                <p id="car-info-p1">GASOLINE</p>
+                                                                <!-- <p id="car-info-p2">DIESEL</p> -->
+                                                                <!-- <p id="car-info-p3">PLUG-IN HYBRID</p> -->
+                                                            </div>
+
+                                                            <p id="car-info-price">From 60.100€</p>
+
+                                                        </div>
+
+                                                    </a>
+
+                                                </li>
+
+                                            </div> 
+
+                                            <div id="option-i" class="option-i-content">
+
+                                                <li>
+
+                                                    <a href="">
+
+                                                        <div class="car-details-container">
+
+                                                            <div class="dummy-tag">Fill</div>
+
+                                                            <img src="../Images/bmw_i3.jpg" title="BMW i3">
+
+                                                            <div class="type-logo"><img src="../Images/bmw_i_logo.jpg"></div>
+
+                                                            <div class="car-name">
+                                                                BMW i3
+                                                            </div>
+
+                                                            <div class="car-info">
+                                                                <!-- <p id="car-info-p1">GASOLINE</p> -->
+                                                                <!-- <p id="car-info-p2">DIESEL</p> -->
+                                                                <!-- <p id="car-info-p3">PLUG-IN HYBRID</p> -->
+                                                                <p id="car-info-p1" style="color: #007DFF;">Electric</p>
+                                                            </div>
+
+                                                            <p id="car-info-price">From 40,700€</p>
+
+                                                        </div>
+
+                                                    </a>
+
+                                                </li>
+
+                                                <li>
+
+                                                    <a href="">
+
+                                                        <div class="car-details-container">
+
+                                                            <div class="new-tag">New</div>
+
+                                                            <img src="../Images/bmw_iX.jpg" title="BMW iX">
+
+                                                            <div class="type-logo"><img src="../Images/bmw_i_logo.jpg"></div>
+
+                                                            <div class="car-name">
+                                                                New BMW iX
+                                                            </div>
+
+                                                            <div class="car-info">
+                                                                <!-- <p id="car-info-p1">GASOLINE</p> -->
+                                                                <!-- <p id="car-info-p2">DIESEL</p> -->
+                                                                <!-- <p id="car-info-p3">PLUG-IN HYBRID</p> -->
+                                                                <p id="car-info-p1" style="color: #007DFF;">Electric</p>
+                                                            </div>
+
+                                                            <p id="car-info-price">From 85,850€</p>
+
+                                                        </div>
+
+                                                    </a>
+
+                                                </li>
+
+                                                <li>
+                                                    <a href="">
+                                                        <div class="car-details-container">
+
+                                                            <div class="new-tag">New</div>
+
+                                                            <img src="../Images/bmw_i4_1.jpg" title="BMW i4">
+
+                                                            <div class="type-logo"><img src="../Images/bmw_i_logo.jpg"></div>
+
+                                                            <div class="car-name">
+                                                                New BMW i4
+                                                            </div>
+
+                                                            <div class="car-info">
+                                                                <!-- <p id="car-info-p1">GASOLINE</p> -->
+                                                                <!-- <p id="car-info-p2">DIESEL</p> -->
+                                                                <!-- <p id="car-info-p3">Plug-in-Hybrid</p> -->
+                                                                <p id="car-info-p1" style="color: #007DFF;">Electric</p>
+                                                            </div>
+
+                                                            <p id="car-info-price">From € 59.900</p>
+
+                                                        </div>
+                                                    </a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="">
+                                                        <div class="car-details-container">
+
+                                                            <div class="new-tag">New</div>
+
+                                                            <img src="../Images/bmw_i4_2.jpg" title="BMW i4 M50">
+
+                                                            <div class="type-logo"><img src="../Images/bmw_i_logo.jpg"></div>
+
+                                                            <div class="car-name">
+                                                                New BMW i4 M50
+                                                            </div>
+
+                                                            <div class="car-info">
+                                                                <!-- <p id="car-info-p1">GASOLINE</p> -->
+                                                                <!-- <p id="car-info-p2">DIESEL</p> -->
+                                                                <!-- <p id="car-info-p3">Plug-in-Hybrid</p> -->
+                                                                <p id="car-info-p1" style="color: #007DFF;">Electric</p>
+                                                            </div>
+
+                                                            <p id="car-info-price">From € 74.500</p>
+
+                                                        </div>
+                                                    </a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="">
+                                                        <div class="car-details-container">
+
+                                                            <div class="new-tag">New</div>
+
+                                                            <img src="../Images/bmw_iX3.jpg" title="BMW iX3">
+
+                                                            <div class="type-logo"><img src="../Images/bmw_i_logo.jpg"></div>
+
+                                                            <div class="car-name">
+                                                                New BMW iX3
+                                                            </div>
+
+                                                            <div class="car-info">
+                                                                <p id="car-info-p1" style="color: #007DFF;">Electric</p>
+                                                            </div>
+
+                                                            <p id="car-info-price">From € 73,300</p>
+
+                                                        </div>
+                                                    </a>
+                                                </li>
+
+                                            </div>
+
+                                            <div id="option-Plug-in-Hybrids" class="option-Plug-in-Hybrids-content">
+
+
+
+                                            </div>
+
+                                            <div id="option-Concept-Cars" class="option-Plug-in-Hybrids-concept">
+
+
+                                                
+                                            </div>
+
                                         </ul>
 
                                     </div>
-                                
-                                </li>
 
-                            </a>
+                            </li>
 
                         </span>
 
-                        <span onclick="displayError()" class="owners-dropdown-menu-container">
-                            
-                            <a href="">
+                        <span class="search-and-buy-dropdown-menu-container">
+
+                            <li>
+
+                                <button type="button" onclick="activateDropdownMenu('search-and-buy')">
+                                        
+                                    <span class="nav-title">
+                                        
+                                        Search & Buy
+                                    
+                                    </span>
+                                
+                                </button>
+
+                                    <div id="search-and-buy-dropdown-menu" class="search-and-buy-dropdown-menu">
+
+                                        <div class="menu-options-wrapper">
+
+                                            <div class="search-and-buy-options">
+
+                                                <ul>
+                                                    <li id="sab1"> <button type="button">Individuals                    </button> </li>
+                                                    <li id="sab2"> <button type="button">Companies and Self-Employed    </button> </li>
+                                                    <li id="sab3"> <button type="button">Special Sales                  </button> </li>
+                                                    <li id="sab4"> <button type="button">Government Support             </button> </li>
+                                                    <li id="sab5"> <button type="button">Accesories                     </button> </li>
+                                                    <li id="sab6"> <button type="button">BMW Connected Drive            </button> </li>
+                                                </ul>
+
+                                            </div>
+
+                                            <div class="search-and-buy-options-show">
+
+                                                <div class="sab1">
+
+                                                    <div class="sab1-options">
+
+                                                        <ul>
+                                                            <li> <button  type="button">Configuration & Price</button> </li>
+                                                            <li> <button  type="button">Promotions and Renting</button> </li>
+                                                            <li> <button  type="button">New Vehicles Available</button> </li>
+                                                            <li> <button  type="button">Used Vehicles Available</button> </li>
+                                                            <li> <button  type="button">Financing and Insurance</button> </li>
+                                                        </ul>
+
+                                                    </div>
+
+                                                    <div class="sab-img">
+
+                                                        <img src="../Images/sab1_img.jpg">
+
+                                                    </div>
+
+                                                    <div id="sab" class="close-btn-container">
+
+                                                        <button type="button"> X </button>
+
+                                                    </div>
+
+                                                </div>
+
+                                                <div class="sab2">
+
+                                                    <div class="sab2-options">
+
+                                                        <ul>
+                                                            <li> <button  type="button">Business Solutions</button> </li>
+                                                            <li> <button  type="button">Promotions and Renting</button> </li>
+                                                        </ul>
+
+                                                    </div>
+
+                                                    <div class="sab-img">
+
+                                                        <img src="../Images/sab2_img.jpg">
+
+                                                    </div>
+
+                                                    <div id="sab" class="close-btn-container">
+
+                                                        <button type="button"> X </button>
+
+                                                    </div>
+
+                                                </div>
+
+                                                <div class="sab3">
+
+                                                    <div class="sab3-options">
+
+                                                        <ul>
+                                                            <li> <button  type="button">Armored Vehicles</button> </li>
+                                                            <li> <button  type="button">BMW Diplomatic Sales</button> </li>
+                                                            <li> <button  type="button">BMW Military Sales</button> </li>
+                                                        </ul>
+
+                                                    </div>
+
+                                                    <div class="sab-img">
+
+                                                        <img src="../Images/sab3_img.jpg">
+
+                                                    </div>
+
+                                                    <div id="sab" class="close-btn-container">
+
+                                                        <button type="button"> X </button>
+
+                                                    </div>
+
+                                                </div>
+
+                                                <div class="sab4">
+
+                                                    <div class="sab4-options">
+
+                                                        <ul>
+                                                            <li> <button  type="button">Moves III Plan</button> </li>
+                                                        </ul>
+
+                                                    </div>
+
+                                                    <div class="sab-img">
+
+                                                        <img src="../Images/sab4_img.jpg">
+
+                                                    </div>
+
+                                                    <div id="sab" class="close-btn-container">
+
+                                                        <button type="button"> X </button>
+
+                                                    </div>
+
+                                                </div>
+
+                                                <div class="sab5">
+
+                                                    <div class="sab5-options">
+
+                                                        <ul>
+                                                            <li> <button  type="button">Promotions</button></li>
+                                                            <li> <button  type="button">Configurator</button></li>
+                                                        </ul>
+
+                                                    </div>
+
+                                                    <div class="sab-img">
+
+                                                        <img src="../Images/sab5_img.jpg">
+
+                                                    </div>
+
+                                                    <div id="sab" class="close-btn-container">
+
+                                                        <button type="button"> X </button>
+
+                                                    </div>
+
+                                                </div>
+
+                                                <div class="sab6">
+
+                                                    <div class="sab5-options">
+
+                                                        <ul>
+                                                            <li> <button  type="button">Connected Drive Store</button></li>
+                                                        </ul>
+
+                                                    </div>
+
+                                                    <div class="sab-img">
+
+                                                        <img src="../Images/sab6_img.jpg">
+
+                                                    </div>
+
+                                                    <div id="sab" class="close-btn-container">
+
+                                                        <button type="button"> X </button>
+
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+                                        <script src="../Scripts/search_and_buy_option_activation.js"></script>
+
+                                    </div>
+
+                                </li>
+
+                        </span>
+
+                        <span class="electric-mobility-dropdown-menu-container">
                                 
                                 <li>
                                     
-                                    <span class="nav-title">Owners</span>
+                                    <button type="button" onclick="activateDropdownMenu('electric-mobility')">
+                                        
+                                        <span class="nav-title">
+                                            
+                                            Electric Mobility
+                                        
+                                        </span>
+                                    
+                                    </button>
 
-                                    <div class="owners-dropdown-menu">
+                                    <div id="electric-mobility-dropdown-menu" class="electric-mobility-dropdown-menu">
+                                        
+                                        <div class="menu-options-wrapper">
 
-                                        <ul>
-                                            <li><a href="">text</a></li>
-                                            <li><a href="">text</a></li>
-                                            <li><a href="">text</a></li>
-                                            <li><a href="">text</a></li>
-                                            <li><a href="">text</a></li>
-                                        </ul>
+                                            <div class="electric-mobility-options">
+
+                                                <ul>
+                                                    <li id="em1"> <button>Sustainability            </button> </li>
+                                                    <li id="em2"> <button>New BMW iX                </button> </li>
+                                                    <li id="em3"> <button>BMW Electric              </button> </li>
+                                                    <li id="em4"> <button>BMW Plug-in Hybrids       </button> </li>
+                                                    <li id="em5"> <button>Autonomy                  </button> </li>
+                                                    <li id="em6"> <button>Load                      </button> </li>
+                                                    <li id="em7"> <button>Regional Advantages       </button> </li>
+                                                    <li id="em8"> <button>Select Flexible Financing </button> </li>
+                                                </ul>
+
+                                            </div>
+
+                                            <div class="electric-mobility-options-show">
+
+                                                <div class="em em1">
+
+                                                    <div class="em-img">
+
+                                                        <img src="../Images/em_img_1.jpg">
+
+                                                    </div>
+
+                                                    <div id="em" class="close-btn-container">
+
+                                                        <button type="button"> X </button>
+
+                                                    </div>
+
+                                                </div>
+
+                                                <div class="em em2">
+
+                                                    <div class="em-img">
+
+                                                        <img src="../Images/em_img_2.jpg">
+
+                                                    </div>
+
+                                                    <div id="em" class="close-btn-container">
+
+                                                        <button type="button"> X </button>
+
+                                                    </div>
+
+                                                </div>
+
+                                                <div class="em em3">
+
+                                                    <div class="em-img">
+
+                                                        <img src="../Images/em_img_3.jpg">
+
+                                                    </div>
+
+                                                    <div id="em" class="close-btn-container">
+
+                                                        <button type="button"> X </button>
+
+                                                    </div>
+
+                                                </div>
+
+                                                <div class="em em4">
+
+                                                    <div class="em-img">
+
+                                                        <img src="../Images/em_img_4.jpg">
+
+                                                    </div>
+
+                                                    <div id="em" class="close-btn-container">
+
+                                                        <button type="button"> X </button>
+
+                                                    </div>
+
+                                                </div>
+
+                                                <div class="em em5">
+
+                                                    <div class="em-img">
+
+                                                        <img src="../Images/em_img_5.jpg">
+
+                                                    </div>
+
+                                                    <div id="em" class="close-btn-container">
+
+                                                        <button type="button"> X </button>
+
+                                                    </div>
+
+                                                </div>
+
+                                                <div class="em em6">
+
+                                                    <div class="em-img">
+
+                                                        <img src="../Images/em_img_6.jpg">
+
+                                                    </div>
+
+                                                    <div id="em" class="close-btn-container">
+
+                                                        <button type="button"> X </button>
+
+                                                    </div>
+
+                                                </div>
+
+                                                <div class="em em7">
+
+                                                    <div class="em-img">
+
+                                                        <img src="../Images/em_img_7.jpg">
+
+                                                    </div>
+
+                                                    <div id="em" class="close-btn-container">
+
+                                                        <button type="button"> X </button>
+
+                                                    </div>
+
+                                                </div>
+
+                                                <div class="em em8">
+
+                                                    <div class="em-img">
+
+                                                        <img src="../Images/em_img_8.jpg">
+
+                                                    </div>
+
+                                                    <div id="em" class="close-btn-container">
+
+                                                        <button type="button"> X </button>
+
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+
+                                        </div>
 
                                     </div>
                                 
                                 </li>
-                            
-                            </a>
-                        
+
                         </span>
 
-                        <span onclick="displayError()" class="bmw-world-dropdown-menu-container">
-                            
-                            <a href="">
+                        <span class="owners-dropdown-menu-container">
                                 
                                 <li>
                                     
-                                    <span class="nav-title">BMW World</span>
+                                    <button type="button" onclick="activateDropdownMenu('owners')">
+                                        
+                                        <span class="nav-title">
+                                            
+                                            Owners
+                                        
+                                        </span>
+                                    
+                                    </button>
 
-                                    <div class="bmw-world-dropdown-menu">
+                                    <div id="owners-dropdown-menu" class="owners-dropdown-menu">
 
                                         <ul>
                                             <li><a href="">text</a></li>
@@ -160,12 +1652,38 @@
                                     </div>
                                 
                                 </li>
-                            
-                            </a>
                         
                         </span>
 
-                        <script src="/Scripts/displayError.js"></script>
+                        <span class="bmw-world-dropdown-menu-container">
+                                
+                                <li>
+                                    
+                                    <button type="button" onclick="activateDropdownMenu('bmw-world')">
+                                        
+                                        <span class="nav-title">
+                                            
+                                            BMW World
+                                        
+                                        </span>
+                                    
+                                    </button>
+
+                                    <div id="bmw-world-dropdown-menu" class="bmw-world-dropdown-menu">
+
+                                        <ul>
+                                            <li><a href="">text</a></li>
+                                            <li><a href="">text</a></li>
+                                            <li><a href="">text</a></li>
+                                            <li><a href="">text</a></li>
+                                            <li><a href="">text</a></li>
+                                        </ul>
+
+                                    </div>
+                                
+                                </li>
+                        
+                        </span>
 
                     </ul>
 
@@ -173,29 +1691,39 @@
 
                 <div class="utilities-logo-container">
 
-                    <span class="search-dropdown-menu-container search" >
+                    <button type="button" onclick="activateDropdownMenu('search')">
 
-                        <a href="">
+                        <span class="search-dropdown-menu-container search" >
+                                            
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="1.5vw" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                                    </svg>
 
-                            <svg xmlns="http://www.w3.org/2000/svg" width="1.5vw" height="auto" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-                            </svg>
+                                <div id="search-dropdown-menu" class="search-dropdown-menu">
 
-                            <div class="search-dropdown-menu">
+                                    <input type="text" placeholder="Search">
 
-                                search
+                                </div>
 
-                            </div>
-                        
-                        </a>
+                                <button id="close-search-btn" class="close-search" onclick="closeSearch()">
+                                    
+                                    <span class="close">
 
-                    </span>
+                                        X
+
+                                    </span>
+                                
+                                </button>
+
+                        </span>
+
+                    </button>
 
                     <span class="account">
                         
-                        <a href="">
+                        <a href="https://www.bmw.es/es/topics/my-bmw-start.html">
 
-                            <svg xmlns="http://www.w3.org/2000/svg" width="1.5vw" height="auto" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1.5vw" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
                                 <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
                             </svg>
 
@@ -205,9 +1733,9 @@
 
                     <span class="location">
 
-                        <a href="">
+                        <a href="https://www.bmw.es/es/ssl/citaprevia/encuentra-tu-concesionario.html#/dlo/ES/es/BMW_BMWI_BMWM">
 
-                            <svg xmlns="http://www.w3.org/2000/svg" width="1.5vw" height="" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1.5vw" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
                                 <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
                                 <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
                             </svg>
@@ -220,7 +1748,7 @@
                         
                         <a href="">
 
-                            <img src="/Images/bmw_logo.svg">
+                            <img src="../Images/bmw_logo.svg">
 
                         </a>
 
@@ -233,18 +1761,35 @@
             <div class="model-container">
 
                 <span class="model-name">
-                    Model Name
+                    BMW i8
                 </span>
 
                 <span class="model-information">
-                    Model Information
+
+                    <span class="i-logo">
+
+                    <img src="../Images/bmw_i_logo.png">
+
+                    </span>
+
+                    <span class="model-information-text">
+
+                        BMW i8: THE FIRST FULLY ELECTRIC SUPERCAR MADE BY BMW
+
+                    </span>
+
                 </span>
 
                 <div class="btn-container">
 
-                    <button class="blue-info-btn">
-                        Configuration and rezervation
-                    </button>
+                    <a href="https://www.bmw.es/es/configurator.html">
+
+                        <button class="blue-info-btn">
+                            Configuration and rezervation
+                        </button>
+
+                    </a>
+
                     <button class="info-btn">
                         Find out more details
                     </button>
@@ -258,17 +1803,35 @@
         <div class="image-container">
 
             <div class="left-image">
+
                 <span class="main-title">The iX3</span>
+
+                <a href="https://www.bmw.es/es/coches-bmw/x/iX3/2021/presentacion.html">
+
                     <button class="info-btn">
+
                         Find more
+
                     </button>
+                
+                </a>
+
             </div>
 
             <div class="right-image">
+
                 <span class="main-title">Discover the models</span>
+
+                <a href="https://www.bmw.es/es/coches-bmw.html?tl=sea-gl-abus-mix-miy-.-sech-BMW_MARCA_COMBO_Coche_BR-.-.-vn-.-.&gclid=CjwKCAjwvuGJBhB1EiwACU1AieCjbFpzSqt_lsN6d3rl0w6czO4fSC83RdIppu7SGI2MR9nWp4tRlhoCyfcQAvD_BwE">
+                    
                     <button class="info-btn">
+
                         Check valabilities
+
                     </button>
+
+                </a>
+
             </div>
 
         </div>
@@ -277,28 +1840,756 @@
 
     <main>
 
-        <div class="quick-model-configuration-container">
+        <!-- <div class="configure-container">
 
-            <div id="div1" class="model-image">
-                <img src="/Images/bmw_m8_1.jpg" title="BMW M8" alt="bmw_model_1">
+            <span>Configure your BMW M8</span>
+
+        </div> -->
+
+
+        <div class="shadow-container">
+
+            <div class="quick-model-configuration-container">
+
+                <div id="div1" class="model-image">
+                    <img src="../Images/bmw_m8_1.jpg" title="BMW M8" alt="bmw_model_1">
+                </div>
+
+                <div id="div2" classs="model-image">
+                    <img src="../Images/bmw_m8_2.jpg" title="BMW M8" alt="bmw_model_2">
+                </div>
+
+                <div id="div3" classs="model-image">
+                    <img src="../Images/bmw_m8_3.jpg" title="BMW M8" alt="bmw_model_3">
+                </div>
+
+                <div id="div4" classs="model-image">
+                    <img src="../Images/bmw_m8_4.jpg" title="BMW M8" alt="bmw_model_4">
+                </div>
+
             </div>
 
-            <div id="div2" classs="model-image">
-                <img src="/Images/bmw_m8_2.jpg" title="BMW M8" alt="bmw_model_2">
+            <div class="configuration-btn-container">
+
+                <a>
+
+                    <button class="blue-info-btn">Configuration</button>
+
+                </a>
+
             </div>
 
-            <div id="div3" classs="model-image">
-                <img src="/Images/bmw_m8_3.jpg" title="BMW M8" alt="bmw_model_3">
+        </div>
+
+        <div class="card-content-container">
+
+            <span id="card1" class="card-container">
+
+                <img src="../Images/card_img_1.jpg">
+
+                <div class="card-title">
+                
+                Promotions BMW Companies
+            
+                </div>
+
+                <div class="card-text">
+
+                    Discover the offers and hiring options in BMW models for your company.
+
+                    <span id="invisible">fill_the_space</span>
+                    <span id="invisible">fill_the_space</span>
+                    <span id="invisible">fill_the_space</span>
+                    <span id="invisible">fill_the_space</span>
+
+                </div>
+
+                <a href="https://www.bmw.es/es/informacion/promociones/empresas/index.html">
+
+                    <button class="card-btn" type="button">
+                            
+                            <span id="fade-arrow">></span> See promotions
+                        
+                    </button>
+
+                </a>
+
+            </span>
+
+            <span id="card2" class="card-container">
+
+                <img src="../Images/card_img_2.jpg">
+
+                <div class="card-title">
+                
+                New Vehicles Available
+
+                <span id="invisible">fill_the_space</span>
+            
+                </div>
+
+                <div class="card-text">
+
+                    Find your BMW.
+
+                <span id="invisible">fill_the_space</span>
+                <span id="invisible">fill_the_space</span>
+                <span id="invisible">fill_the_space</span>
+                <span id="invisible">fill_the_space</span>
+                <span id="invisible">fill_the_space</span>
+                <span id="invisible">fill_the_space</span>
+                <span id="invisible">fill_the_space</span>
+                <span id="invisible">fill_the_space</span>
+
+                </div>
+
+                <a href="https://www.bmw.es/es/informacion/promociones/empresas/index.html">
+
+                    <button class="card-btn" type="button">
+                            
+                            <span id="fade-arrow">></span> See models
+                        
+                    </button>
+
+                </a>
+
+            </span>
+
+            <span id="card3" class="card-container">
+
+                <img src="../Images/card_img_3.jpg">
+
+                <div class="card-title">
+                
+                Used Vehicles
+
+                <span id="invisible">fill_the_space</span>
+                <span id="invisible">fill_the_space</span>
+
+                </div>
+
+                <div class="card-text">
+
+                    Discover a wide ranged of used BMW vehicles.
+
+                <span id="invisible">fill_the_space</span>
+                <span id="invisible">fill_the_space</span>
+                <span id="invisible">fill_the_space</span>
+                <span id="invisible">fill_the_space</span>
+                <span id="invisible">fill_the_space</span>
+                <span id="invisible">fill_the_space</span>
+
+                </div>
+
+                <a href="https://www.bmw.es/es/informacion/promociones/empresas/index.html">
+
+                    <button class="card-btn" type="button">
+                            
+                            <span id="fade-arrow">></span> Discover the range
+                        
+                    </button>
+
+                </a>
+
+            </span>
+
+            <span id="card4" class="card-container">
+
+                <img src="../Images/card_img_4.jpg">
+
+                <div class="card-title">
+                
+                BMW Maintenance Services
+            
+                </div>
+
+                <div class="card-text">
+
+                    Enter your license plate and discover the best maintenance promotion for your BMW. The usual care, more accessible than ever.
+
+                </div>
+
+                <a href="https://www.bmw.es/es/informacion/promociones/empresas/index.html">
+
+                    <button class="card-btn" type="button">
+                            
+                            <span id="fade-arrow">></span> See promotions
+                        
+                    </button>
+
+                </a>
+
+            </span>
+
+            <script src="../Scripts/button.js"></script>
+            <script src="../Scripts/invisible.js"></script>
+
+        </div>
+
+        <div class="lr-title">
+            
+            <h2>
+                
+                Latest Releases
+            
+            </h2>
+        
+        </div>
+
+        <div class="lr-container">
+
+            <span id="lrcard1" class="lr-card">
+
+                <div class="lr-model-name">
+                    
+                    M240i xDrive Coupe
+                
+                </div>
+
+                <img src="../Images/bmw_2_1.jpg">
+
+                <a href="https://configure.bmw.es/es_ES/configure/G42/51CM/FMANL,P0C56,S01CB,S01DF,S01VZ,S0230,S02PA,S02T4,S02TB,S02VB,S02VC,S02VF,S02VL,S03M1,S0420,S0430,S0431,S0459,S0488,S0493,S04AT,S04NE,S04UR,S0508,S0534,S0544,S0548,S0552,S05AC,S05AQ,S05AS,S05DA,S05DC,S0654,S0688,S06AE,S06AF,S06AK,S06C4,S06U2,S0710,S0711,S0715,S0754,S0760,S0775,S07CG,S0856,S0883,S08KA,S08R9,S08TF,S0925?expanded=true">
+
+                    <button class="info-btn-blk">
+
+                        View configuration
+
+                    </button>
+
+                </a>
+
+                <div class="lr-specs-list">
+
+                    <ul>
+
+                        <li>
+                            
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                                <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                            </svg>
+
+                            Adaptive suspension M
+                        
+                        </li>
+
+                        <li>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                                <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                            </svg>
+
+                            Haman Kardon Surround Sound System
+                            
+
+                        </li>
+
+                        <li>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                                <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                            </svg>
+
+                            M Sport seats for driver and front passenger
+
+
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </span>
+
+            <span id="lrcard2" class="lr-card">
+
+                <div class="lr-model-name">
+                    
+                    BMW iX xDrive50
+                
+                </div>
+
+                <img src="../Images/bmw_iX.jpg">
+
+                <a href="https://configure.bmw.es/es_ES/configure/I20/21CF/FSCIC,P0C57,S01LD,S0230,S02PA,S02VB,S02VH,S02VR,S0319,S0322,S0323,S0330,S03L7,S0407,S0413,S0428,S042A,S04AA,S04FM,S04HC,S04NB,S04NR,S04U9,S04V1,S0548,S05AC,S05AQ,S05AU,S05AZ,S05DN,S0654,S06AE,S06AF,S06AK,S06AU,S06C4,S06F1,S06NX,S06PA,S06U3,S06U7,S07UN,S0801,S0851,S0879,S08R9,S08TF,S09T8/EI0000E6,SE000001">
+
+                    <button class="info-btn-blk">
+
+                        View configuration
+
+                    </button>
+
+                </a>
+
+                <div class="lr-specs-list">
+
+                    <ul>
+
+                        <li>
+                            
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                                <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                            </svg>
+
+                            Electric range: 599 km, 0-100 km / h: 4.6 sec
+                        
+                        </li>
+
+                        <li>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                                <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                            </svg>
+
+                            Charging cable and 1 year BMW Charging card
+
+                        </li>
+
+                        <li>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                                <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                            </svg>
+
+                            22 ”wheels, Sports package, Suite interior design, Panoramic glass roof
+
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </span>
+
+            <span id="lrcard3" class="lr-card">
+
+                <div class="lr-model-name">
+                    
+                    BMW 4 Series Gran Coupe 430i
+                
+                </div>
+
+                <img src="../Images/bmw_i4_2.jpg">
+
+                <a href="https://configure.bmw.es/es_ES/configure/G26/61AV/FKGNL,P0C36,S01CB,S01DF,S01DZ,S0230,S02PA,S02TB,S02VB,S02VC,S02VL,S0302,S0322,S03FK,S0420,S0430,S0431,S0459,S048Z,S0490,S0493,S0494,S04KK,S04UR,S0534,S0544,S0548,S05AQ,S05AS,S05DA,S05DM,S0654,S0676,S06AE,S06AF,S06AK,S06C4,S06NW,S06U3,S06WD,S0704,S0710,S0715,S0760,S0775,S07CG,S07LF,S07M9,S0856,S0883,S08R9,S08TF,S09QX,S0ZCF,S0ZCN?expanded=true">
+
+                    <button class="info-btn-blk">
+
+                        View configuration
+
+                    </button>
+
+                </a>
+
+                <div class="lr-specs-list">
+
+                    <ul>
+
+                        <li>
+                            
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                                <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                            </svg>
+
+                            Driving Assistant
+                        
+                        </li>
+
+                        <li>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                                <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                            </svg>
+
+                            M Sport Finish
+
+                        </li>
+
+                        <li>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                                <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                            </svg>
+
+                            BMW Live Cockpit Professional
+
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </span>
+
+        </div>
+
+        <div class="ln-title">
+
+            <h2>
+                
+                LATEST NEWS
+            
+            </h2>
+
+        </div>
+
+        <div class="slideshow-container">
+
+            <button id="left-scroll" class="slideshow-btn">
+
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+                </svg>
+
+            </button>
+
+            <div class="ln-container">
+
+                <span id="lncard1" class="ln-card">
+
+                    <img src="../Images/ln_card_img_1.jpg">
+
+                    <div class="ln-title">
+
+                        We celebrate the 10th anniversary of the BMW i
+
+                    </div>
+
+                    <div class="ln-text">
+
+                        A journey through these ten years of electric mobility with the highlights of the "Born Electric" range.
+
+                    </div>
+
+                    <a href="">
+
+                        <button class="ln-btn" type="button">
+
+                            <span id="fade-arrow">></span> Find out more
+
+                        </button>
+
+                    </a>
+
+                </span>
+
+                <span id="lncard2" class="ln-card">
+
+                    <img src="../Images/ln_card_img_2.jpg">
+
+                    <div class="ln-title">
+
+                        We talk to Supercar Blondie
+
+                    </div>
+
+                    <div class="ln-text">
+
+                        The new BMW Personal Assistant interviews Supercar Blondie, one of the biggest influencers in the world of cars.
+
+                    </div>
+
+                    <a href="">
+
+                        <button class="ln-btn" type="button">
+
+                            <span id="fade-arrow">></span> Find out more
+
+                        </button>
+
+                    </a>
+
+                </span>
+
+                <span id="lncard2" class="ln-card">
+
+                    <img src="../Images/ln_card_img_3.jpg">
+
+                    <div class="ln-title">
+
+                        BMW CES 2021
+
+                    </div>
+
+                    <div class="ln-text">
+
+                        Welcome to the BMW CES 2021 digital experience that ushers in a new era. An era that is going to change everything we know about in-vehicle digital intelligence.
+
+                    </div>
+
+                    <a href="">
+
+                        <button class="ln-btn" type="button">
+
+                            <span id="fade-arrow">></span> Find out more
+
+                        </button>
+
+                    </a>
+
+                </span>
+
+                <span id="lncard2" class="ln-card">
+
+                    <img src="../Images/ln_card_img_4.jpg">
+
+                    <div class="ln-title">
+
+                        BMW Renting Service
+
+                    </div>
+
+                    <div class="ln-text">
+
+                        Hiring a rental service with BMW means enjoying a service of the highest quality and confidence.
+
+                    </div>
+
+                    <a href="">
+
+                        <button class="ln-btn" type="button">
+
+                            <span id="fade-arrow">></span> Find out more
+
+                        </button>
+
+                    </a>
+
+                </span>
+
+                <span id="lncard2" class="ln-card">
+
+                    <img src="../Images/ln_card_img_5.jpg">
+
+                    <div class="ln-title">
+
+                        BMW X2 Mesh Edition
+
+                    </div>
+
+                    <div class="ln-text">
+
+                        The BMW X2 Mesh Edition is a more daring and exclusive version. which makes a difference thanks to some details compared to the conventional BMW X2. Do you dare to discover it?
+
+                    </div>
+
+                    <a href="">
+
+                        <button class="ln-btn" type="button">
+
+                            <span id="fade-arrow">></span> Find out more
+
+                        </button>
+
+                    </a>
+
+                </span>
+
+                <span id="lncard2" class="ln-card">
+
+                    <img src="../Images/ln_card_img_6.jpg">
+
+                    <div class="ln-title">
+
+                        Why the new BMW M3 is the ultimate saloon
+
+                    </div>
+
+                    <div class="ln-text">
+
+                        With 35 years of history, the new generation of the BMW M3 will arrive in dealerships in March 2021. An urban vehicle, which demonstrates a performance typical of the world of competition.
+
+                    </div>
+
+                    <a href="">
+
+                        <button class="ln-btn" type="button">
+
+                            <span id="fade-arrow">></span> Find out more
+
+                        </button>
+
+                    </a>
+
+                </span>
+
+                <span id="lncard2" class="ln-card">
+
+                    <img src="../Images/ln_card_img7.jpg">
+
+                    <div class="ln-title">
+
+                        Mild Hybrid cars: what are they and how do they work?
+
+                    </div>
+
+                    <div class="ln-text">
+
+                        Mild Hybrid is a hybrid technology in vehicles characterized by the fact that the electric battery acts only as a support for the combustion engine.
+
+                    </div>
+
+                    <a href="">
+
+                        <button class="ln-btn" type="button">
+
+                            <span id="fade-arrow">></span> Find out more
+
+                        </button>
+
+                    </a>
+
+                </span>
+
+                <span id="lncard2" class="ln-card">
+
+                    <img src="../Images/ln_card_img_8.jpg">
+
+                    <div class="ln-title">
+
+                        The advantages of a plug-in hybrid car
+
+                    </div>
+
+                    <div class="ln-text">
+
+                        There are many benefits of driving a BMW plug-in hybrid car, ranging from environmental friendliness to the tax and mobility benefits they enjoy.
+
+                    </div>
+
+                    <a href="">
+
+                        <button class="ln-btn" type="button">
+
+                            <span id="fade-arrow">></span> Find out more
+
+                        </button>
+
+                    </a>
+
+                </span>
+
             </div>
 
-            <div id="div4" classs="model-image">
-                <img src="/Images/bmw_m8_4.jpg">
+            <button id="right-scroll" class="slideshow-btn">
+
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                </svg>
+
+            </button>
+
+            <script>
+
+                var scrollAmount = 0;
+
+            </script>
+            
+            <script src="../Scripts/scrollLeft.js"></script>
+            <script src="../Scripts/scrollRight.js"></script>
+            <script src="../Scripts/close_options.js"></script>
+            <script src="../Scripts/em_option_activation.js"></script>
 
         </div>
 
     </main>
 
     <footer>
+
+        <div class="social-media">
+
+            <div><h2>Follow us on</h2></div>
+
+            <div class="social-media-logos">
+
+                <svg xmlns="http://www.w3.org/2000/svg" width="2vw" height="2vw" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                    <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+                </svg>
+
+                <svg xmlns="http://www.w3.org/2000/svg" width="2vw" height="2vw" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                    <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+                </svg>
+
+                <svg xmlns="http://www.w3.org/2000/svg" width="2vw" height="2vw" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+                    <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+                </svg>
+
+                <svg xmlns="http://www.w3.org/2000/svg" width="2vw" height="2vw" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16">
+                    <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"/>
+                </svg>
+
+            </div>
+
+        </div>
+
+        <hr class="footer-sep">
+
+        <div class="footer-lists">
+
+            <div class="list">
+
+                <h3>Links of interest</h3>
+
+                <ul>
+                    <li><a href="https://www.bmw.es/es/ssl/newsletter.html">Newsletter</a></li>
+                    <li><a href="https://www.bmw.es/es/topics/accesorios-servicios/servicio-recogida-entrega-coche-domicilio.html">Home service</a></li>
+                    <li><a href="">COVID-19 protocols</a></li>
+                    <li><a href="">Glossary BMW</a></li>
+                    <li><a href="">BMW.com</a></li>
+                </ul>
+
+            </div>
+
+            <div class="list">
+
+                <h3>Discover BMW</h3>
+
+                <ul>
+                    <li><a href="">BMW Range</a></li>
+                    <li><a href="">Range Catalogs</a></li>
+                    <li><a href="">Electric Mobility</a></li>
+                    <li><a href="">Business Promotions</a></li>
+                    <li><a href="">News</a></li>
+                </ul>
+
+            </div>
+
+            <div class="list">
+
+                <h3>Contact</h3>
+
+                <ul>
+                    <li><a href="">Individuals and Companies</a></li>
+                    <li><a href="">Dealers and Workshops</a></li>
+                    <li><a href="">Job</a></li>
+                </ul>
+
+            </div>
+
+        </div>
+
+        <div class="footer-legal-terms">
+
+            <div>
+
+                <div class="copy-right">© BMW ES 2021</div>
+
+            </div>
+
+            <div class="footer-stuff-container">
+
+                <div class="footer-stuff">cookies</div>
+
+                <div class="footer-stuff">Legal warning</div>
+
+                <div class="footer-stuff">Privacy Policy</div>
+
+                <div class="footer-stuff">Conditions of use in RR.SS</div>
+
+                <div class="footer-stuff">Privacy Policy RR.SS</div>
+
+            </div>
+
+        </div>
 
     </footer>
 
